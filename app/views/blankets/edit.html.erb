@@ -1,0 +1,39 @@
+<h1>Edit blanket info</h1>
+
+<%= form_for @blanket do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, vakue: :name, :required => "required" %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.text_field :photo %>
+  </p>
+  <p>
+    <%= f.label :blanket_type %><br />
+    <%= f.text_field :blanket_type %>
+  </p>
+  <p>
+    <%= f.label :brand %><br />
+    <%= f.text_field :brand %>
+  </p>
+  <p>
+    <%= f.label :colour %><br />
+    <%= f.text_field :colour %>
+  </p>
+  <p>
+    <%= f.label :trim %><br />
+    <%= f.text_field :trim %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>

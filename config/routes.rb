@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   post "blankets" => "blankets#create"
   get "blankets/new" => "blankets#new"
 
-  get "blankets/:id" => "blankets#show"
+  get "blankets/:id" => "blankets#show", as: "blanket"
+
+  get "blankets/:id/edit" => "blankets#edit", as: "edit_blanket"
+  patch "blankets/:id" => "blankets#update"
 
 end

@@ -21,6 +21,20 @@ class BlanketsController < ApplicationController
     @blanket = Blanket.new
   end
 
+  def edit
+    @blanket = Blanket.find(params[:id])
+  end
+
+  def update
+    @blanket = Blanket.find(params[:id])
+
+    if @blanket.update_attributes(blanket_params)
+      redirect_to "/blankets/#{@blanket.id}"
+    else
+      render :edit
+    end
+  end
+
 private
   def blanket_params
     params.require(:blanket).permit(:name, :photo, :blanket_type, :brand, :size, :colour, :trim, :status, :note)
