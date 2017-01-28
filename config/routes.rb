@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get "blankets/:id/edit" => "blankets#edit", as: "edit_blanket"
   patch "blankets/:id" => "blankets#update"
 
+  delete "blankets/:id" => "blankets#destroy", as: "delete_blanket"
+
 end

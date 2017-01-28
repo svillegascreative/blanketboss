@@ -35,6 +35,12 @@ class BlanketsController < ApplicationController
     end
   end
 
+  def destroy
+    @blanket = Blanket.find(params[:id])
+    @blanket.destroy
+    redirect_to blankets_url
+  end
+
 private
   def blanket_params
     params.require(:blanket).permit(:name, :photo, :blanket_type, :brand, :size, :colour, :trim, :status, :note)
