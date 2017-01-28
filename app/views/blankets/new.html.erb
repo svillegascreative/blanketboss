@@ -3,7 +3,7 @@
 <%= form_for @blanket do |f| %>
   <p>
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :required => "required" %>
   </p>
   <p>
     <%= f.label :photo %><br />
