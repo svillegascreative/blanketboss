@@ -4,8 +4,15 @@
   <img src="<%= @blanket.photo %>" alt="Photo of <%= @blanket.name %>"><br />
 <% end %>
 
-<span>Type:</span><%= @blanket.blanket_type %><br />
-<span>Colour:</span><%= @blanket.colour %><br />
-<span>Trim:</span><%= @blanket.trim %><br />
-<span>Status:</span><%= @blanket.status %><br />
-<span>Note:</span><%= @blanket.note %>
+<div>
+  <span>Type:</span><%= @blanket.blanket_type %><br />
+  <span>Colour:</span><%= @blanket.colour %><br />
+  <span>Trim:</span><%= @blanket.trim %><br />
+  <span>Status:</span><%= @blanket.status %><br />
+  <span>Note:</span><%= @blanket.note %>
+</div>
+
+<div>
+  <%= link_to "Edit", edit_blanket_path(@blanket) %> |
+  <%= link_to "Delete", @blanket, method: :delete %>
+</div>

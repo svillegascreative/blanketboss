@@ -9,6 +9,25 @@
   </head>
 
   <body>
+  <header>
+    <a href="<%= blankets_url %>">BlanketBoss</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="<%= blankets_url %>/new">Add a blanket</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
     <%= yield %>
+
+  </main>
+
+  <footer>
+    &copy; 2017 <a href="http://svillegas.com">svillegas creative</a>
+  </footer>
+
   </body>
 </html>
