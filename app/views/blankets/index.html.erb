@@ -1,2 +1,16 @@
 <h1>Blanket Boss</h1>
 <h2>Your equine wardrobe manager</h2>
+
+<ul>
+  <% @blankets.each do |blanket| %>
+    <li>
+      <h3><%= blanket.name %></h3>
+      <img src="<%= blanket.photo %>" alt="">
+      <span>Type:</span><%= blanket.blanket_type %><br />
+      <span>Colour:</span><%= blanket.colour %><br />
+      <span>Trim:</span><%= blanket.trim %><br />
+      <span>Status:</span><%= blanket.status %><br />
+      <span>Note:</span><%= blanket.note %>
+    </li>
+  <% end %>
+</ul>
