@@ -5,7 +5,7 @@
   <% @blankets.each do |blanket| %>
     <li>
       <h3><%= link_to blanket.name, "/blankets/#{blanket.id}"%></h3>
-      <img src="<%= blanket.photo %>" alt="Photo of <%= blanket.name %>">
+      <img src="<%= blanket.photo %>" alt="Photo of <%= blanket.name %>"><br />
       <span>Type:</span><%= blanket.blanket_type %><br />
       <span>Colour:</span><%= blanket.colour %><br />
       <span>Trim:</span><%= blanket.trim %><br />
