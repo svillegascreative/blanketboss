@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get "blankets" => "blankets#index"
 
+  get "blankets/:id" => "blankets#show"
+
 end
