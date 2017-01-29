@@ -1,7 +1,6 @@
-<h1>Blanket Boss</h1>
 <h2>Your equine wardrobe manager</h2>
 
-<ul>
+<ul class="blanket-list">
   <% @blankets.each do |blanket| %>
     <li>
       <h3><%= link_to blanket.name, "/blankets/#{blanket.id}"%></h3>

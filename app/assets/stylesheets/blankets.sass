@@ -1,0 +1,108 @@
+// Place all the styles related to the blankets controller here.
+// They will automatically be included in application.css.
+
+// MIXINS & VARIABLES --------------------------------------------------
+
+$basefont: "Arial", sans-serif
+
+// Palette
+// URL: http://paletton.com/#uid=22H0u0k9yif4Esc7jmNb1cfisaZ */
+
+$color-primary-0: #EBDCE0
+$color-primary-1: #C6ACB3
+$color-primary-2: #A4828B
+$color-primary-3: #865F69
+$color-primary-4: #5D3B44
+
+$color-complement-0: #DBE3D5
+$color-complement-1: #B0BFA6
+$color-complement-2: #B0BFA6
+$color-complement-3: #6B815C
+$color-complement-4: #465A39
+
+
+
+// GENERAL STYLES ------------------------------------------------------
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+html
+  height: 101%
+
+body
+  min-height: 100%
+  background-color: $color-primary-1
+  position: relative
+
+main
+  margin: 0 1em
+  overflow: hidden
+
+image
+  max-width: 100%
+
+// TYPOGRAPHY ----------------------------------------------------------
+a
+  color: $color-complement-4
+  text-decoration: none
+
+a:hover,
+a:visited
+  color: $color-complement-3
+
+
+// HEADER --------------------------------------------------------------
+header
+  background: $color-primary-3
+  overflow: hidden
+  text-align: center
+  a,
+  a:hover,
+  a:active,
+  a:visited
+    color: #fff
+
+
+// NAV -----------------------------------------------------------------
+nav
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  a,
+  a:hover,
+  a:active,
+  a:visited
+    color: #fff
+
+
+// BLANKET LIST --------------------------------------------------------
+.blanket-list
+  list-style-type: none
+  margin: 0
+  padding: 0
+  li
+    background: $color-primary-0
+    padding: 1em
+    margin: 1em 0
+  img
+    width: 100%
+    border: 5px solid #fff
+
+
+
+
+// FOOTER --------------------------------------------------------------
+footer
+  background: $color-primary-3
+  position: absolute
+  bottom: 0
+  width: 100%
+  padding: 1em
+  a,
+  a:hover,
+  a:active,
+  a:visited
+    color: #fff
