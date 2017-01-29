@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   resources :blankets
 
+  get "/blankets" => "blankets#list"
+
 end

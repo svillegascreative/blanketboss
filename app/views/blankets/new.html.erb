@@ -1,39 +1,39 @@
 <h1>Add a blanket</h1>
 
 <%= form_for @blanket do |f| %>
-  <p>
-    <%= f.label :name %><br />
+  <div>
+    <%= f.label :name %>
     <%= f.text_field :name, :required => "required" %>
-  </p>
-  <p>
-    <%= f.label :photo %><br />
+  </div>
+  <div>
+    <%= f.label :photo %>
     <%= f.text_field :photo %>
-  </p>
-  <p>
-    <%= f.label :blanket_type %><br />
+  </div>
+  <div>
+    <%= f.label :blanket_type %>
     <%= f.text_field :blanket_type %>
-  </p>
-  <p>
-    <%= f.label :brand %><br />
+  </div>
+  <div>
+    <%= f.label :brand %>
     <%= f.text_field :brand %>
-  </p>
-  <p>
-    <%= f.label :colour %><br />
+  </div>
+  <div>
+    <%= f.label :colour %>
     <%= f.text_field :colour %>
-  </p>
-  <p>
-    <%= f.label :trim %><br />
+  </div>
+  <div>
+    <%= f.label :trim %>
     <%= f.text_field :trim %>
-  </p>
-  <p>
-    <%= f.label :status %><br />
+  </div>
+  <div>
+    <%= f.label :status %>
     <%= f.text_field :status %>
-  </p>
-  <p>
-    <%= f.label :note %><br />
+  </div>
+  <div>
+    <%= f.label :note %>
     <%= f.text_field :note %>
-  </p>
-  <p>
+  </div>
+
     <%= f.submit "Save" %>
-  </p>
+
 <% end %>

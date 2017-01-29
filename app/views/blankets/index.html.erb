@@ -2,16 +2,13 @@
 
 <ul class="blanket-list">
   <% @blankets.each do |blanket| %>
-    <li>
-      <h3><%= link_to blanket.name, "/blankets/#{blanket.id}"%></h3>
+    <li class="blanket-card">
+      <h3><%= link_to blanket.name, "/blankets/#{blanket.id}" %></h3>
       <% if blanket.photo != "" %>
-        <img src="<%= blanket.photo %>" alt="Photo of <%= blanket.name %>"><br />
+        <%= link_to image_tag(blanket.photo), "/blankets/#{blanket.id}" %>
+      <% else %>
+        <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
       <% end %>
-      <span>Type:</span><%= blanket.blanket_type %><br />
-      <span>Colour:</span><%= blanket.colour %><br />
-      <span>Trim:</span><%= blanket.trim %><br />
-      <span>Status:</span><%= blanket.status %><br />
-      <span>Note:</span><%= blanket.note %>
     </li>
   <% end %>
 </ul>
