@@ -57,6 +57,31 @@ a:visited
   color: $color-complement-3
 
 
+// FORMS ---------------------------------------------------------------
+form
+  div
+    background: $color-primary-0
+    padding: 0.5em 1em
+    margin: 1em 0
+  label
+    margin-right: 1em
+  input
+    border: none
+    padding: 0.5em 1em
+    width: 100%
+    input:focus
+      border: 1px solid $color-primary-3
+  input[type=submit]
+    background: $color-primary-2
+    color: $color-primary-1
+    font-weight: bold
+  textarea
+    display: block
+    width: 100%
+    height: 5em
+    border: none
+
+
 // HEADER --------------------------------------------------------------
 header
   background: $color-primary-3
@@ -107,30 +132,10 @@ nav
     margin: 0.5em
 
 
-// FORMS ---------------------------------------------------------------
-.new_blanket,
-.edit_blanket
-  div
-    background: $color-primary-0
-    padding: 0.5em 1em
-    margin: 1em 0
-  label
-    margin-right: 1em
-  input
-    border: none
-    padding: 0.5em 1em
-    width: 100%
-    input:focus
-      border: 1px solid $color-primary-3
-  input[type=submit]
-    background: $color-primary-2
-    color: $color-primary-1
-    font-weight: bold
-  textarea
-    display: block
-    width: 100%
-    height: 5em
-    border: none
+// BLANKETS AND BLANKET LISTS-------------------------------------------
+//.new_blanket,
+//.edit_blanket
+
 
 
 // FOOTER --------------------------------------------------------------

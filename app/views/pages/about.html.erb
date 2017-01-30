@@ -4,3 +4,30 @@ your equine wardrobe manager!</h2>
 <p>
   Many horse owners choose to stable our horses, and ride and train them year-round. Often, this means we need to manage their coat growth, and supplement their care with blankets. Sometimes many blankets. Sometimes... entire wardrobes.
 </p>
+<p>
+  Whether you have one horse with many blankets of different types, blankets for home and for show, or multiple horses each with their own blankets, BlanketBoss will help you keep track of them all.
+</p>
+
+<h3>Who made this?</h3>
+<p>
+  BlanketBoss was built and developed by sylvia villegas. Yay!
+</p>
+
+<h3 id="contact">Feedback?</h3>
+<p>Comments about BlanketBoss? Suggestions? Bugs? Let me know by filling out the form below. <em>Note: This form doesn't work yet!</em></p>
+
+<%= form_tag("/", method: "post") do %>
+  <div>
+    <%= label_tag(:name, "Name") %>
+    <%= text_field_tag(:name) %>
+  </div>
+  <div>
+    <%= label_tag(:email, "Email") %>
+    <%= text_field_tag(:email) %>
+  </div>
+  <div>
+    <%= label_tag(:feedback, "Feedback") %>
+    <%= text_area_tag(:feedback) %>
+  </div>
+  <%= submit_tag("Send") %>
+<% end %>
