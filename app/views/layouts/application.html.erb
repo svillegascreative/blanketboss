@@ -14,7 +14,8 @@
 
     <nav>
       <ul>
-        <li><a href="<%= blankets_url %>/new">Add a blanket</a></li>
+        <li><%= link_to("See all blankets", blankets_url) %></li>
+        <li><%= link_to("Add a blanket", "#{blankets_url}/new") %></li>
       </ul>
     </nav>
   </header>
@@ -28,7 +29,8 @@
   </main>
 
   <footer>
-    &copy; 2017 <a href="http://svillegas.com">svillegas creative</a>
+    <%= link_to("About", about_url) %> |
+    &copy; 2017 <%= link_to("sylvia villegas creative", "http://svillegas.com") %>
   </footer>
 
   </body>

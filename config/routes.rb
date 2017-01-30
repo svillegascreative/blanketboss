@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :blankets
 
   # pages
-  get "/about" => "pages#about"
+  get "/about" => "pages#about", as: "about"
 
   # blankets
   get "/blankets" => "blankets#list"
