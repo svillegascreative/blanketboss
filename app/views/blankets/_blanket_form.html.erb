@@ -1,0 +1,45 @@
+<%= form_for @blanket do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => "required" %>
+  </div>
+  <div>
+    <%= f.label :photo %>
+    <%= f.text_field :photo %>
+  </div>
+  <div>
+    <%= f.label :blanket_type %>
+    <%= f.select(:blanket_type) do %>
+      <% [["turnout", 1],
+          ["stable", 2],
+          ["sheet", 3],
+          ["cooler", 4],
+          ["therapeutic", 5]].each do |c| %>
+          <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+    <% end %>
+  </div>
+  <div>
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </div>
+  <div>
+    <%= f.label :colour %>
+    <%= f.text_field :colour %>
+  </div>
+  <div>
+    <%= f.label :trim %>
+    <%= f.text_field :trim %>
+  </div>
+  <div>
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+  <div>
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </div>
+
+    <%= f.submit "Save" %>
+
+<% end %>
