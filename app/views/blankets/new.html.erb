@@ -11,7 +11,15 @@
   </div>
   <div>
     <%= f.label :blanket_type %>
-    <%= f.text_field :blanket_type %>
+    <%= f.select(:blanket_type) do %>
+      <% [["turnout", 1],
+          ["stable", 2],
+          ["sheet", 3],
+          ["cooler", 4],
+          ["therapeutic", 5]].each do |c| %>
+          <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+    <% end %>
   </div>
   <div>
     <%= f.label :brand %>
@@ -31,7 +39,7 @@
   </div>
   <div>
     <%= f.label :note %>
-    <%= f.text_field :note %>
+    <%= f.text_area :note %>
   </div>
 
     <%= f.submit "Save" %>
