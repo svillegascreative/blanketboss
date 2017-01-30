@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 
 // MIXINS & VARIABLES --------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Copse')
+
 
 $basefont: "Arial", sans-serif
+$funfont: "Copse", serif
 
 // Palette
 // URL: http://paletton.com/#uid=22H0u0k9yif4Esc7jmNb1cfisaZ */
@@ -56,6 +59,9 @@ a:hover,
 a:visited
   color: $color-complement-3
 
+h1
+  font-family: $funfont
+
 
 // FORMS ---------------------------------------------------------------
 form
@@ -84,6 +90,7 @@ form
 
 // HEADER --------------------------------------------------------------
 header
+  font-family: $funfont
   background: $color-primary-3
   overflow: hidden
   text-align: center
