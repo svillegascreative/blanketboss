@@ -9,19 +9,25 @@
   </div>
   <div>
     <%= f.label :blanket_type %>
-    <%= f.select(:blanket_type) do %>
-      <% [["turnout", 1],
-          ["stable", 2],
-          ["sheet", 3],
-          ["cooler", 4],
-          ["therapeutic", 5]].each do |c| %>
-          <%= content_tag(:option, c.first, value: c.last) %>
-      <% end %>
-    <% end %>
+    <%= f.select(:blanket_type,
+      [["turnout blanket", 1],
+      ["stable blanket", 2],
+      ["blanket liner", 3],
+      ["sheet", 4],
+      ["rainsheet",5],
+      ["cooler", 6],
+      ["quarter sheet", 7],
+      ["fly sheet", 8],
+      ["therapeutic", 9],
+      ["accessory", 10]], {prompt: "Select type"}) %>
   </div>
   <div>
     <%= f.label :brand %>
     <%= f.text_field :brand %>
+  </div>
+  <div>
+    <%= f.label :size %>
+    <%= f.text_field :size %>
   </div>
   <div>
     <%= f.label :colour %>
@@ -32,8 +38,18 @@
     <%= f.text_field :trim %>
   </div>
   <div>
-    <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%= f.label :status, multiple: true do %>
+      <%= check_box_tag 'blanket[status][]', 'in use', @blanket.status == "in use" %>
+      In use
+    <% end %>
+    <%= f.label :status, multiple: true do %>
+      <%= check_box_tag 'blanket[status][]', "in storage", @blanket.status == "in storage" %>
+      In storage
+    <% end %>
+    <%= f.label :status, multiple: true do %>
+      <%= check_box_tag 'blanket[status][]', "needs repair", @blanket.status == "needs repair" %>
+      Needs repair
+    <% end %>
   </div>
   <div>
     <%= f.label :note %>
