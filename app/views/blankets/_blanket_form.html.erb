@@ -9,17 +9,7 @@
   </div>
   <div>
     <%= f.label :blanket_type %>
-    <%= f.select(:blanket_type,
-      [["turnout blanket", 1],
-      ["stable blanket", 2],
-      ["blanket liner", 3],
-      ["sheet", 4],
-      ["rainsheet",5],
-      ["cooler", 6],
-      ["quarter sheet", 7],
-      ["fly sheet", 8],
-      ["therapeutic", 9],
-      ["accessory", 10]], {prompt: "Select type"}) %>
+    <%= f.collection_select(:blanket_type_id, BlanketType.all, :id, :blanket_type,{prompt: "Select type"}) %>
   </div>
   <div>
     <%= f.label :brand %>

@@ -1,3 +1,7 @@
 class BlanketType < ApplicationRecord
-  belongs_to :blanket
+  has_many :blankets
+
+  def readable
+    blanket_type
+  end
 end

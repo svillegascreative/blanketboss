@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208003359) do
+ActiveRecord::Schema.define(version: 20170208005150) do
 
   create_table "blanket_types", force: :cascade do |t|
     t.string   "blanket_type"
-    t.integer  "blanket_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["blanket_id"], name: "index_blanket_types_on_blanket_id"
   end
 
   create_table "blankets", force: :cascade do |t|
@@ -27,9 +25,9 @@ ActiveRecord::Schema.define(version: 20170208003359) do
     t.string   "note"
     t.string   "photo"
     t.string   "status"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "blanket_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "blanket_type_id"
     t.string   "size"
     t.string   "brand"
   end
