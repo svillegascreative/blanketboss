@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   # blankets
   get "/blankets" => "blankets#list"
 
+  get "/search" => "pages#search"
+
 end
