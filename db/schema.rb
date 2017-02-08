@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208005150) do
+ActiveRecord::Schema.define(version: 20170208044610) do
 
   create_table "blanket_types", force: :cascade do |t|
     t.string   "blanket_type"
@@ -24,12 +24,23 @@ ActiveRecord::Schema.define(version: 20170208005150) do
     t.string   "trim"
     t.string   "note"
     t.string   "photo"
-    t.string   "status"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "blanket_type_id"
     t.string   "size"
     t.string   "brand"
+    t.integer  "status_ids"
+  end
+
+  create_table "blankets_statuses", id: false, force: :cascade do |t|
+    t.integer "blanket_id", null: false
+    t.integer "status_id",  null: false
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

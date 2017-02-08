@@ -94,3 +94,14 @@
 # BlanketType.create(blanket_type: "fly sheet")
 # BlanketType.create(blanket_type: "therapeutic")
 # BlanketType.create(blanket_type: "accessory")
+
+
+Status.create(name: "clean")
+Status.create(name: "needs cleaning")
+Status.create(name: "sent for cleaning")
+Status.create(name: "new condition")
+Status.create(name: "good condition")
+Status.create(name: "poor condition")
+Status.create(name: "needs repair")
+Status.create(name: "sent for repair")
+Status.create(name: "needs waterproofing")
