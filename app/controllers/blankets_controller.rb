@@ -43,7 +43,7 @@ class BlanketsController < ApplicationController
 
 private
   def blanket_params
-    params.require(:blanket).permit(:name, :photo, :blanket_type, :brand, :size, :colour, :trim, :status, :note)
+    params.require(:blanket).permit(:name, :photo, :blanket_type_id, :brand, :size, :colour, :trim, :status, :note)
   end
 
 end

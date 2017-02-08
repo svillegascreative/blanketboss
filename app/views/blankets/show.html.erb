@@ -6,7 +6,7 @@
   <% end %>
 
   <span>Brand:</span><%= @blanket.brand %><br />
-  <span>Type:</span><%= @blanket.blanket_type.readable %><br />
+  <span>Type:</span><%= @blanket.blanket_type&.readable %><br />
   <span>Colour:</span><%= @blanket.colour %><br />
   <span>Trim:</span><%= @blanket.trim %><br />
   <span>Size:</span><%= @blanket.size %><br />
