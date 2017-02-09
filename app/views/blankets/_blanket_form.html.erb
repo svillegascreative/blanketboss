@@ -1,4 +1,7 @@
 <%= form_for @blanket do |f| %>
+
+  <%= render "shared/errors", object: product %>
+
   <div>
     <%= f.label :name %>
     <%= f.text_field :name, :required => "required" %>
