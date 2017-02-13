@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "/about" => "pages#about", as: "about"
 
   # blankets
-  get "/blankets" => "blankets#list"
+  get "/blankets" => "blankets#index"
 
   get "/search" => "pages#search"
 

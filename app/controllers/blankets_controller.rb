@@ -8,6 +8,10 @@ class BlanketsController < ApplicationController
     @blanket = Blanket.find(params[:id])
   end
 
+  def new
+    @blanket = Blanket.new
+  end
+
   def create
     @blanket = Blanket.new(blanket_params)
     if @blanket.save
@@ -15,10 +19,6 @@ class BlanketsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def new
-    @blanket = Blanket.new
   end
 
   def edit
@@ -39,6 +39,10 @@ class BlanketsController < ApplicationController
     @blanket = Blanket.find(params[:id])
     @blanket.destroy
     redirect_to blankets_url
+  end
+
+  def list
+    @blankets = Blanket.all
   end
 
 private
