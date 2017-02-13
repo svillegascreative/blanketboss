@@ -2,7 +2,7 @@
 
 <%= form_tag("/list", method: "get") do %>
   <%# render "shared/errors", object: @blankets %>
-  <%= hidden_field(:status_ids, "7") %>
+  <%= hidden_field(@blankets, status_ids: 7) %>
   Blankets needing repair
   <%= submit_tag "See list"%>
 <% end %>
