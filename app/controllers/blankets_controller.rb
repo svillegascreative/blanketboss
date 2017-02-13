@@ -41,8 +41,11 @@ class BlanketsController < ApplicationController
     redirect_to blankets_url
   end
 
-  def list
+  def make_list
     @blankets = Blanket.all
+  end
+
+  def list
   end
 
 private

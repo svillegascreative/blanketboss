@@ -3,14 +3,15 @@ Rails.application.routes.draw do
 
   root "pages#index"
 
-  resources :blankets
-
   # pages
   get "/about" => "pages#about", as: "about"
+  get "/search" => "pages#search"
 
   # blankets
-  get "/blankets" => "blankets#index"
+  get "/make_list" => "blankets#make_list"
+  get "/list" => "blankets#list"
+  resources :blankets
+  # get "/blankets" => "blankets#index"
 
-  get "/search" => "pages#search"
 
 end
