@@ -1,6 +1,8 @@
 <h1>Make a list of blankets</h1>
 
-<%= form_tag(url: "/list", method: "get") do %>
+<%= form_tag("/list", method: "get") do %>
   <%# render "shared/errors", object: @blankets %>
-
+  <%= hidden_field(:status_ids, "7") %>
+  Blankets needing repair
+  <%= submit_tag "See list"%>
 <% end %>
