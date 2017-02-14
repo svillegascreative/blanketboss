@@ -46,6 +46,8 @@ class BlanketsController < ApplicationController
   end
 
   def list
+    status =  Status.find(params[:status_ids])
+    @blankets = status.blankets
   end
 
 private

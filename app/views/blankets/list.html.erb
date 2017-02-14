@@ -1,1 +1,14 @@
 <h1>list of blankets</h1>
+
+<ul class="blanket-list">
+  <% @blankets.each do |blanket| %>
+    <li class="blanket-card">
+      <h3><%= link_to blanket.name, "/blankets/#{blanket.id}" %></h3>
+      <% if blanket.photo != "" %>
+        <%= link_to image_tag(blanket.photo), "/blankets/#{blanket.id}" %>
+      <% else %>
+        <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
