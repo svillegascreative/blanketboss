@@ -6,3 +6,17 @@
   <%= label_tag "Blankets needing repair" %>
   <%= submit_tag "See list"%>
 <% end %>
+<hr>
+<%= form_tag("/list", method: "get") do %>
+  <%# render "shared/errors", object: @blankets %>
+  <%= hidden_field_tag(:status_ids, 8) %>
+  <%= label_tag "Blankets sent out for repair" %>
+  <%= submit_tag "See list"%>
+<% end %>
+<hr>
+<%= form_tag("/list", method: "get") do %>
+  <%# render "shared/errors", object: @blankets %>
+  <%= label_tag "Blankets in size " %>
+  <%= number_field_tag :size %>
+  <%= submit_tag "See list"%>
+<% end %>

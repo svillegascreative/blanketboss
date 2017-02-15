@@ -42,12 +42,13 @@ class BlanketsController < ApplicationController
   end
 
   def make_list
-    @blankets = Blanket.all
   end
 
   def list
-    status =  Status.find(params[:status_ids])
-    @blankets = status.blankets
+    if :status_ids
+      status =  Status.find(params[:status_ids])
+      @blankets = status.blankets
+    end
   end
 
 private
