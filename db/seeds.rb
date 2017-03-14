@@ -13,7 +13,8 @@
 #   note: "has matching neck cover",
 #   photo: "http://cdn3.volusion.com/hxsed.knlnq/v/vspfiles/photos/BLA1113-2T.jpg",
 #   brand: "Amigo",
-#   size: "82"
+#   size: "82",
+#   blanket_type_id: 1
 # )
 #
 # Blanket.create(
@@ -23,7 +24,8 @@
 #   note: "front snaps broken",
 #   photo: "http://images.greenhawk.com/large/Greenhawk_BLS4014_.jpg",
 #   brand: "Shedrow",
-#   size: "76"
+#   size: "76",
+#   blanket_type_id: 1
 # )
 #
 # Blanket.create(
@@ -33,7 +35,8 @@
 #   note: "",
 #   photo: "http://www.bahrsaddlery.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/o/bot-mesh-rug.jpg",
 #   brand: "Back on Track",
-#   size: "78"
+#   size: "78",
+#   blanket_type_id: 8
 # )
 #
 # Blanket.create(
@@ -43,7 +46,8 @@
 #   note: "",
 #   photo: "http://images.greenhawk.com/large/Greenhawk_BLS4005_.jpg",
 #   brand: "Shedrow",
-#   size: "80"
+#   size: "80",
+#   blanket_type_id: 2
 # )
 #
 # Blanket.create(
@@ -53,7 +57,8 @@
 #   note: "",
 #   photo: "http://cdn3.volusion.com/hxsed.knlnq/v/vspfiles/photos/BLA1122-2T.jpg",
 #   brand: "Bucas",
-#   size: "78"
+#   size: "78",
+#   blanket_type_id: 5
 # )
 #
 # Blanket.create(
@@ -63,7 +68,8 @@
 #   note: "",
 #   photo: "http://www.bahrsaddlery.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/a/ramboblocknetcooler1.jpg",
 #   brand: "Horseware",
-#   size: "78"
+#   size: "78",
+#   blanket_type_id: 5
 # )
 #
 # Blanket.create(
@@ -73,9 +79,10 @@
 #   note: "embroidered 'Summit Stables'",
 #   photo: "http://images.greenhawk.com//Large/Greenhawk_BLC0025BK.jpg",
 #   brand: "Shedrow",
-#   size: "76"
+#   size: "76",
+#   blanket_type_id: 5
 # )
-#
+
 # Blanket.create(
 #   name: "irish knit",
 #   colour: "aqua",
@@ -83,7 +90,8 @@
 #   note: "",
 #   photo: "http://images.greenhawk.com/large/Greenhawk_BLC3043XB.jpg",
 #   brand: "Shedrow",
-#   size: "78"
+#   size: "78",
+#   blanket_type_id: 5
 # )
 # BlanketType.create(blanket_type: "turnout blanket")
 # BlanketType.create(blanket_type: "stable blanket")
@@ -96,12 +104,12 @@
 # BlanketType.create(blanket_type: "accessory")
 
 
-Status.create(name: "clean")
-Status.create(name: "needs cleaning")
-Status.create(name: "sent for cleaning")
-Status.create(name: "new condition")
-Status.create(name: "good condition")
-Status.create(name: "poor condition")
-Status.create(name: "needs repair")
-Status.create(name: "sent for repair")
-Status.create(name: "needs waterproofing")
+# Status.create(name: "clean")
+# Status.create(name: "needs cleaning")
+# Status.create(name: "sent for cleaning")
+# Status.create(name: "new condition")
+# Status.create(name: "good condition")
+# Status.create(name: "poor condition")
+# Status.create(name: "needs repair")
+# Status.create(name: "sent for repair")
+# Status.create(name: "needs waterproofing")
