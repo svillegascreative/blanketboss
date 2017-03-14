@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get "/list" => "blankets#list"
 
   resources :blankets
-  resources :users, except: :index
+  resources :users, only: [:new, :create]
 
 end
