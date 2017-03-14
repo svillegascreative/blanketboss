@@ -1,9 +1,5 @@
 <h1>Welcome to BlanketBoss!</h1>
-<h3>What would you like to do?</h3>
 
-<div>
-  <%= link_to("See all blankets", blankets_url) %>
-</div>
-<div>
-  <%= link_to("Add a blanket", new_blanket_url) %>
-</div>
+<%= render "sessions/form" %>
+
+<%= link_to "Register", new_user_path %>
