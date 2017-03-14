@@ -7,8 +7,12 @@
     <%= f.text_field :name, :required => "required" %>
   </div>
   <div>
-    <%= f.label :photo %>
-    <%= f.text_field :photo %>
+    <%= f.label :photo %><br />
+    <span>Upload from URL:</span>
+    <%= f.text_field :remote_photo_url%>
+    <strong>OR</strong><br />
+    <span>Upload from device:</span><br />
+    <%= f.file_field :photo %>
   </div>
   <div>
     <%= f.label :blanket_type %>
@@ -23,7 +27,7 @@
     <%= f.text_field :size %>
   </div>
   <div>
-    <%= f.label :colour %>
+    <%= f.label :colour, "Main colour or pattern" %>
     <%= f.text_field :colour %>
   </div>
   <div>
@@ -31,7 +35,7 @@
     <%= f.text_field :trim %>
   </div>
   <div>
-    <%= f.label :status %>
+    <%= f.label :status, "Status Tags" %>
     <%= f.collection_check_boxes(:status_ids, Status.all, :id, :name) do |status| %>
       <div>
         <%= status.check_box %>
@@ -40,7 +44,7 @@
     <% end %>
   </div>
   <div>
-    <%= f.label :note %>
+    <%= f.label :note, "Notes" %>
     <%= f.text_area :note %>
   </div>
 
