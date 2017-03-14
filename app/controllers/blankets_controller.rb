@@ -55,7 +55,18 @@ class BlanketsController < ApplicationController
 
 private
   def blanket_params
-    params.require(:blanket).permit(:name, :photo, :blanket_type_id, :brand, :size, :colour, :trim, :note, status_ids:[] )
+    params.require(:blanket)
+          .permit(:name,
+                  :photo,
+                  :photo_cache,
+                  :remote_photo_url,
+                  :blanket_type_id,
+                  :brand,
+                  :size,
+                  :colour,
+                  :trim,
+                  :note,
+                  status_ids:[] )
   end
 
   def load_user
