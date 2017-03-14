@@ -1,8 +1,8 @@
 <div class="blanket-card">
   <h1><%= @blanket.name %></h1>
 
-  <% if @blanket.photo != "" %>
-    <img src="<%= @blanket.photo %>" alt="Photo of <%= @blanket.name %>"><br />
+  <% if @blanket.photo.present? %>
+    <%= image_tag @blanket.photo, alt: "Photo of #{@blanket.name}" %>
   <% end %>
 
   <span>Brand:</span><%= @blanket.brand %><br />
