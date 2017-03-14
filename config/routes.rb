@@ -10,8 +10,12 @@ Rails.application.routes.draw do
   # blankets
   get "/make_list" => "blankets#make_list"
   get "/list" => "blankets#list"
-  resources :blankets
-  # get "/blankets" => "blankets#index"
 
+  resources :blankets
+  resources :users, only: [:new, :create]
+
+  resources :sessions, only: [:new, :create, :destroy]
+  get 'login', to: 'sessions#new', as: 'login'
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
 
 end
