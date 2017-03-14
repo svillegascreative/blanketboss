@@ -1,11 +1,13 @@
 class BlanketsController < ApplicationController
+  # before_action :ensure_logged_in
 
   def index
-    @blankets = Blanket.all
+    load_user
+    @blankets = @user.blankets
   end
 
   def show
-    @blanket = Blanket.find(params[:id])
+    find_blanket
   end
 
   def new
@@ -15,18 +17,18 @@ class BlanketsController < ApplicationController
   def create
     @blanket = Blanket.new(blanket_params)
     if @blanket.save
-      redirect_to blankets_url
+      redirect_to blanket_url
     else
       render :new
     end
   end
 
   def edit
-    @blanket = Blanket.find(params[:id])
+    find_blanket
   end
 
   def update
-    @blanket = Blanket.find(params[:id])
+    find_blanket
 
     if @blanket.update_attributes(blanket_params)
       redirect_to "/blankets/#{@blanket.id}"
@@ -36,7 +38,7 @@ class BlanketsController < ApplicationController
   end
 
   def destroy
-    @blanket = Blanket.find(params[:id])
+    find_blanket
     @blanket.destroy
     redirect_to blankets_url
   end
@@ -54,6 +56,14 @@ class BlanketsController < ApplicationController
 private
   def blanket_params
     params.require(:blanket).permit(:name, :photo, :blanket_type_id, :brand, :size, :colour, :trim, :note, status_ids:[] )
+  end
+
+  def load_user
+    @user = current_user
+  end
+
+  def find_blanket
+    @blanket = Blanket.find(params[:id])
   end
 
 end
