@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314140853) do
+ActiveRecord::Schema.define(version: 20170314164956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170314140853) do
     t.string   "size"
     t.string   "brand"
     t.integer  "status_ids"
+    t.integer  "user_id"
   end
 
   create_table "blankets_statuses", id: false, force: :cascade do |t|
