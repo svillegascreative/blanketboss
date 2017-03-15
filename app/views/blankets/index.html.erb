@@ -1,7 +1,7 @@
 <ul class="blanket-list">
   <% @blankets.each do |blanket| %>
     <li class="blanket-list-card">
-      <% if blanket.photo != "" %>
+      <% if blanket.photo.present? %>
         <%= link_to image_tag(blanket.photo), "/blankets/#{blanket.id}" %>
       <% else %>
         <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
