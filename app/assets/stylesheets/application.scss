@@ -9,10 +9,25 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
+
  */
 
-//= require application
-//= require blankets
+@import 'normalize';
+@import 'neat';
+@import 'bourbon';
+
+// base styles
+@import 'base/variables';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/grid-settings';
+@import 'base/buttons';
+@import 'base/lists';
+@import 'base/tables';
+@import 'base/forms';
+
+// pages
+@import 'blankets';
+@import 'pages';
+@import 'sessions';
+@import 'users';
