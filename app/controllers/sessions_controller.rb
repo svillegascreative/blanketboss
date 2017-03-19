@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     if login(params[:email], params[:password])
-      redirect_back_or_to root_url, notice: "Login successful!"
+      redirect_to blankets_path, notice: "Login successful!"
     else
       flash.now[:alert] = "Login failed"
       render action: new
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    direct_back_or_to root_url, notice: "Logged out!"
+    redirect_back_or_to root_url, notice: "Logged out!"
   end
 
 end
