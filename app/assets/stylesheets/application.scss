@@ -15,4 +15,19 @@
 @import 'normalize';
 @import 'neat';
 @import 'bourbon';
-@import 'base/base'
+
+// base styles
+@import 'base/variables';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/grid-settings';
+@import 'base/buttons';
+@import 'base/lists';
+@import 'base/tables';
+@import 'base/forms';
+
+// pages
+@import 'blankets';
+@import 'pages';
+@import 'sessions';
+@import 'users';
