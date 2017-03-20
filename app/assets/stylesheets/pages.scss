@@ -1,3 +1,9 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.title {
+  font-size: 12rem;
+  font-weight: bold;
+  color: transparent;
+  background: url("http://i.ebayimg.com/images/g/lysAAMXQlgtSzZZg/s-l400.jpg") repeat;
+  -webkit-background-clip: text;
+  font-family: Arial;
+  text-align: center;
+}
