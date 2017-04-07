@@ -1,9 +1,8 @@
 class BlanketsController < ApplicationController
-  # before_action :ensure_logged_in
+  before_action :require_login
 
   def index
-    load_user
-    @blankets = @user.blankets
+    @blankets = current_user.blankets
     # @blankets = Blanket.where('user_id = ?', current_user.id).where('size = ?', params[:size])
   end
 
@@ -69,10 +68,6 @@ private
                   :trim,
                   :note,
                   status_ids:[] )
-  end
-
-  def load_user
-    @user = current_user
   end
 
   def find_blanket
