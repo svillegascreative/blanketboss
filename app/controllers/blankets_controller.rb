@@ -4,6 +4,7 @@ class BlanketsController < ApplicationController
   def index
     load_user
     @blankets = @user.blankets
+    # @blankets = Blanket.where('user_id = ?', current_user.id).where('size = ?', params[:size])
   end
 
   def show
@@ -17,7 +18,7 @@ class BlanketsController < ApplicationController
   def create
     @blanket = Blanket.new(blanket_params)
     if @blanket.save
-      redirect_to blanket_url
+      redirect_to @blanket
     else
       render :new
     end
@@ -56,7 +57,8 @@ class BlanketsController < ApplicationController
 private
   def blanket_params
     params.require(:blanket)
-          .permit(:name,
+          .permit(:user_id,
+                  :name,
                   :photo,
                   :photo_cache,
                   :remote_photo_url,
