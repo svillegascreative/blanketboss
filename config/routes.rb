@@ -4,18 +4,18 @@ Rails.application.routes.draw do
   root "pages#home"
 
   # pages
-  get "/about" => "pages#about", as: "about"
-  get "/search" => "pages#search"
+  get "about" => "pages#about", as: "about"
+  get "search" => "pages#search"
 
   # blankets
-  get "/make_list" => "blankets#make_list"
-  get "/list" => "blankets#list"
+  get "make_list" => "blankets#make_list"
+  get "list" => "blankets#list"
 
   resources :blankets
   resources :users, only: [:new, :create]
 
   resources :sessions, only: [:new, :create, :destroy]
-  get 'login', to: 'sessions#new', as: 'login'
-  delete 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'login' => 'sessions#new', as: 'login'
+  delete 'logout' => 'sessions#destroy', as: 'logout'
 
 end
