@@ -9,7 +9,7 @@
   <span>Type:</span><%= @blanket.blanket_type&.readable %><br />
   <span>Colour:</span><%= @blanket.colour %><br />
   <span>Trim:</span><%= @blanket.trim %><br />
-  <span>Size:</span><%= @blanket.size %><br />
+  <span>Size:</span><%= @blanket.blanket_size %><br />
   <span>Status:</span>
   <% @blanket.statuses.each do |status| %>
     <%= status.name %>
