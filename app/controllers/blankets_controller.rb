@@ -42,16 +42,7 @@ class BlanketsController < ApplicationController
     @blanket.destroy
     redirect_to blankets_url
   end
-
-  def make_list
-  end
-
-  def list
-    if :status_ids
-      status =  Status.find(params[:status_ids])
-      @blankets = status.blankets
-    end
-  end
+  
 
 private
   def blanket_params
