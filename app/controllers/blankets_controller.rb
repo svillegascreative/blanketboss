@@ -1,12 +1,9 @@
 class BlanketsController < ApplicationController
   before_action :require_login
-  # before_action :select_user_blankets
 
   def index
-    select_user_blankets
-    @blankets = Blanket.filter(params.slice(:blanket_size, :blanket_type_id, :status_ids))
-    # @blankets = current_user.blankets
-    # @blankets = Blanket.where('user_id = ?', current_user.id).where('size = ?', params[:size])
+    @blankets = current_user.blankets
+                            .filter(params.slice(:blanket_size, :blanket_type_id, :status_ids))
   end
 
   def show
@@ -73,12 +70,14 @@ private
                   status_ids:[] )
   end
 
-  def select_user_blankets
-    @blankets = Blanket.where('user_id = ?', current_user.id)
-  end
-
   def find_blanket
     @blanket = Blanket.find(params[:id])
+
+    if @blanket.user == current_user
+      @blanket
+    else
+      redirect_back fallback_location: blankets_url
+    end
   end
 
 end
