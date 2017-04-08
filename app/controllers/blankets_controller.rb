@@ -42,7 +42,7 @@ class BlanketsController < ApplicationController
     @blanket.destroy
     redirect_to blankets_url
   end
-  
+
 
 private
   def blanket_params
@@ -64,7 +64,7 @@ private
   def find_blanket
     @blanket = Blanket.find(params[:id])
 
-    if @blanket.user == current_user
+    if @blanket.user_id == current_user.id
       @blanket
     else
       redirect_back fallback_location: blankets_url
