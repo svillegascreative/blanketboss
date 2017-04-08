@@ -1,3 +1,10 @@
+Filters:
+<%= form_tag blankets_path, method: :get do %>
+    <%= collection_select(:blanket, :blanket_size, current_user.blankets.select(:blanket_size).uniq, :blanket_size, :blanket_size,{prompt: "Select size"}) %>
+    <%= collection_select(:blanket, :blanket_type_id, BlanketType.all, :id, :blanket_type ,{prompt: "Select type"}) %>
+    <%= submit_tag "Filter" %>
+<% end %>
+
 <ul class="blanket-list">
   <% @blankets.each do |blanket| %>
     <li class="blanket-list-card">
