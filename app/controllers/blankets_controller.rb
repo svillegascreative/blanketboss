@@ -1,8 +1,11 @@
 class BlanketsController < ApplicationController
   before_action :require_login
+  # before_action :select_user_blankets
 
   def index
-    @blankets = current_user.blankets
+    select_user_blankets
+    @blankets = Blanket.filter(params.slice(:blanket_size, :blanket_type_id, :status_ids))
+    # @blankets = current_user.blankets
     # @blankets = Blanket.where('user_id = ?', current_user.id).where('size = ?', params[:size])
   end
 
@@ -63,11 +66,15 @@ private
                   :remote_photo_url,
                   :blanket_type_id,
                   :brand,
-                  :size,
+                  :blanket_size,
                   :colour,
                   :trim,
                   :note,
                   status_ids:[] )
+  end
+
+  def select_user_blankets
+    @blankets = Blanket.where('user_id = ?', current_user.id)
   end
 
   def find_blanket
