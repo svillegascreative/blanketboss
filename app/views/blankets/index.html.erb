@@ -2,7 +2,7 @@ Filters:
 <%= form_tag blankets_path, method: :get do %>
     <%= collection_select(nil, :blanket_size, @blankets.select(:blanket_size).distinct, :blanket_size, :blanket_size,{prompt: "Select size"}) %>
     <%= collection_select(nil, :blanket_type_id, BlanketType.all, :id, :blanket_type, {prompt: "Select type"}) %>
-    <%= collection_select(nil, :status_ids, Status.all, :id, :status_names, {prompt: "Select status"}) %>
+    <%= collection_select(nil, :status_ids, Status.all, :id, :name, {prompt: "Select status"}, {multiple: true}) %>
     <%= submit_tag "Filter", name: nil %>
 <% end %>
 
