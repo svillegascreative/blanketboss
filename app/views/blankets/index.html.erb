@@ -1,19 +1,26 @@
 Filters:
 <%= form_tag blankets_path, method: :get do %>
-    <%= collection_select(nil, :blanket_size, current_user.blankets.select(:blanket_size).distinct, :blanket_size, :blanket_size,{prompt: "Select size"}) %>
-    <%= collection_select(nil, :blanket_type_id, BlanketType.all, :id, :blanket_type ,{prompt: "Select type"}) %>
+    <%= collection_select(nil, :blanket_size, @blankets.select(:blanket_size).distinct, :blanket_size, :blanket_size,{prompt: "Select size"}) %>
+    <%= collection_select(nil, :blanket_type_id, BlanketType.all, :id, :blanket_type, {prompt: "Select type"}) %>
+    <%= collection_select(nil, :status_ids, Status.all, :id, :status_names, {prompt: "Select status"}) %>
     <%= submit_tag "Filter", name: nil %>
 <% end %>
 
-<ul class="blanket-list">
-  <% @blankets.each do |blanket| %>
-    <li class="blanket-list-card">
-      <% if blanket.photo.present? %>
-        <%= link_to image_tag(blanket.photo), "/blankets/#{blanket.id}" %>
-      <% else %>
-        <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
-      <% end %>
-      <h3><%= link_to blanket.name, "/blankets/#{blanket.id}" %></h3>
-    </li>
-  <% end %>
-</ul>
+<% if @blankets.empty? %>
+  <p>
+    There are no blankets to display.
+  </p>
+<% else %>
+  <ul class="blanket-list">
+    <% @blankets.each do |blanket| %>
+      <li class="blanket-list-card">
+        <% if blanket.photo.present? %>
+          <%= link_to image_tag(blanket.photo), "/blankets/#{blanket.id}" %>
+        <% else %>
+          <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
+        <% end %>
+        <h3><%= link_to blanket.name, "/blankets/#{blanket.id}" %></h3>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

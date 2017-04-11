@@ -6,7 +6,7 @@ class Blanket < ApplicationRecord
 
   scope :blanket_type_id, -> (blanket_type_id) {where blanket_type_id: blanket_type_id}
   scope :blanket_size, -> (blanket_size) {where blanket_size: blanket_size}
-  scope :status_ids, -> (status_ids) {where status_ids: status_ids}
+  scope :status_ids, -> (status_id) { joins(:statuses).where(statuses: { id: status_id }) }
   include Filterable
 
   mount_uploader :photo, PhotoUploader
