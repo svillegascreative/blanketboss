@@ -1,0 +1,23 @@
+.app-header {
+  // @include clearfix;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 5px #ccc;
+}
+
+.home-link {
+  float: left;
+  font-family: $brand-font-family;
+}
+
+nav {
+  float: right;
+}
+
+.main-menu {
+  li {
+    display: inline;
+  }
+}

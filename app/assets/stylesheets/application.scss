@@ -16,15 +16,18 @@
 @import 'neat';
 @import 'bourbon';
 
-// base styles
+// base styles - Bourbon
 @import 'base/variables';
-@import 'base/base';
+@import 'base/grid-settings'; // Neat
 @import 'base/typography';
-@import 'base/grid-settings';
 @import 'base/buttons';
 @import 'base/lists';
 @import 'base/tables';
 @import 'base/forms';
+
+// general layout
+@import 'structure';
+@import 'header';
 
 // pages
 @import 'blankets';

@@ -1,9 +1,14 @@
 .title {
+  font-family: $brand-font-family;
   font-size: 12rem;
   font-weight: bold;
-  color: transparent;
+  line-height: 0.8;
+  // color: transparent;
   background: url("http://i.ebayimg.com/images/g/lysAAMXQlgtSzZZg/s-l400.jpg") repeat;
   -webkit-background-clip: text;
-  font-family: Arial;
   text-align: center;
+  span {
+    font-size: 8rem;
+    display: block;
+  }
 }
