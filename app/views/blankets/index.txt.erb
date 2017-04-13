@@ -1,0 +1,23 @@
+_____ LIST OF BLANKETS _____
+
+Size: <% @blankets ? "#{@blankets.blanket_size.distinct}" : "All" %>
+Type: <% params[:blanket_type_id] ? params[:blanket_type_id] : "All" %>
+Status(es): <% params[:status] ? params[:status_ids] : "All" %>
+____________________________
+
+<% if @blankets.empty? %>
+  There are no blankets to display.
+<% else %>
+  <% @blankets.each do |blanket| %>
+<%= blanket.name.upcase %>
+  Size <%= blanket.blanket_size %> <%= blanket.brand %> <%= blanket.blanket_type&.readable %>
+  Colour: <%= blanket.colour %>
+  Trim: <%= blanket.trim %>
+  Status:
+<% blanket.statuses.each do |status| %> - <%= status.name %>
+    <% end %>
+  Note: <%= blanket.note %>
+
+
+  <% end %>
+<% end %>

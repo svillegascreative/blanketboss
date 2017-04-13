@@ -4,6 +4,10 @@ class BlanketsController < ApplicationController
   def index
     @blankets = current_user.blankets
                             .filter(params.slice(:blanket_size, :blanket_type_id, :status_ids))
+    respond_to do |format|
+      format.html
+      format.text { render 'index.txt.erb' }
+    end
   end
 
   def show
