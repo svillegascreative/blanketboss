@@ -1,23 +1,43 @@
 <div class="blanket-card">
-  <h1><%= @blanket.name %></h1>
+  <div class="blanket-actions">
+    <%= link_to "Edit", edit_blanket_path(@blanket) %> |
+    <%= link_to "Delete", @blanket, method: :delete %>
+  </div>
+  <h1 class="blanket-name"><%= @blanket.name %></h1>
 
   <% if @blanket.photo.present? %>
-    <%= image_tag @blanket.photo, alt: "Photo of #{@blanket.name}" %>
+  <%= image_tag @blanket.photo, alt: "Photo of #{@blanket.name}" %>
   <% end %>
 
-  <span>Brand:</span><%= @blanket.brand %><br />
-  <span>Type:</span><%= @blanket.blanket_type&.readable %><br />
-  <span>Colour:</span><%= @blanket.colour %><br />
-  <span>Trim:</span><%= @blanket.trim %><br />
-  <span>Size:</span><%= @blanket.blanket_size %><br />
-  <span>Status:</span>
-  <% @blanket.statuses.each do |status| %>
-    <%= status.name %>
-  <% end %><br />
-  <span>Note:</span><%= @blanket.note %>
-</div>
+  <p>
+    <span>Brand:</span>
+    <%= @blanket.brand %>
+  </p>
+  <p>
+    <span>Type:</span>
+    <%= @blanket.blanket_type&.readable %>
+  </p>
+  <p>
+    <span>Colour:</span>
+    <%= @blanket.colour %>
+  </p>
+  <p>
+    <span>Trim:</span>
+    <%= @blanket.trim %>
+  </p>
+  <p>
+    <span>Size:</span>
+    <%= @blanket.blanket_size %>
+  </p>
+  <p>
+    <span>Status:</span>
+    <% @blanket.statuses.each do |status| %>
+      <%= status.name %>
+    <% end %>
+  </p>
+  <p>
+    <span>Note:</span>
+    <%= @blanket.note %>
+  </p>
 
-<div class="blanket-actions">
-  <%= link_to "Edit", edit_blanket_path(@blanket) %>
-  <%= link_to "Delete", @blanket, method: :delete %>
 </div>
