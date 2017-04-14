@@ -3,13 +3,17 @@
   position: fixed;
   width: 100%;
   top: 0;
-  background: #fff;
+  z-index: 1000;
+  padding: $small-spacing;
+  background: $base-background-color;
   box-shadow: 0 2px 5px #ccc;
 }
 
 .home-link {
   float: left;
   font-family: $brand-font-family;
+  font-size: 1.25rem;
+  margin: 0;
 }
 
 nav {
