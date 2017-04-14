@@ -11,10 +11,4 @@ class Blanket < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-
-  # def self.search(term)
-  #
-  # end
-
-
 end
