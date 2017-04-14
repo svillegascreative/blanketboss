@@ -14,7 +14,6 @@ legend {
 label {
   display: block;
   font-weight: 600;
-  margin-bottom: $small-spacing / 2;
 }
 
 input,
@@ -81,4 +80,8 @@ select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
+}
+
+.form-field {
+  margin-bottom: $base-spacing * 1.5;
 }
