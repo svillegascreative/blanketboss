@@ -49,18 +49,14 @@
         <% else %>
           <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
         <% end %>
-        <h3><%= link_to blanket.name, "/blankets/#{blanket.id}", class: "blanket-link" %></h3>
+        <h3><%= link_to blanket.name, "/blankets/#{blanket.id}", class: "blanket-link modal-trigger" %></h3>
       </li>
     <% end %>
   </ul>
 <% end %>
 
-<div class="modal-fade-screen">
-  <div class="modal-inner">
-    <div class="modal-close">
-    </div>
-    <div class="modal-content">
-      <!-- AJAX response -->
-    </div>
-  </div>
+<div id="overlay"></div>
+<div id="modal">
+  <div id="content"></div>
+  <a href="#" id="close">X</a>
 </div>
