@@ -2,7 +2,6 @@
   <%= form_tag blankets_path, method: :get do %>
     <div class="filter-input">
       <%= label_tag "[blanket_sizes]", "Size:" %>
-      <%#= select_tag "blanket_size", options_from_collection_for_select(Blanket.select(:blanket_size).distinct, :blanket_size, :blanket_size, selected: :blanket_size), prompt: "All" %>
       <%= collection_select(nil,
                             :blanket_size,
                             current_user.blankets.select(:blanket_size).distinct.order("blanket_size ASC"),
@@ -50,8 +49,18 @@
         <% else %>
           <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
         <% end %>
-        <h3><%= link_to blanket.name, "/blankets/#{blanket.id}" %></h3>
+        <h3><%= link_to blanket.name, "/blankets/#{blanket.id}", class: "blanket-link" %></h3>
       </li>
     <% end %>
   </ul>
 <% end %>
+
+<div class="modal-fade-screen">
+  <div class="modal-inner">
+    <div class="modal-close">
+    </div>
+    <div class="modal-content">
+      <!-- AJAX response -->
+    </div>
+  </div>
+</div>

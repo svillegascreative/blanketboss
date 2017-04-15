@@ -12,6 +12,10 @@ class BlanketsController < ApplicationController
 
   def show
     find_blanket
+
+    if request.xhr?
+      render layout: false
+    end
   end
 
   def new
