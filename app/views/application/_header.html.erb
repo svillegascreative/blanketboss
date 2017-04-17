@@ -1,6 +1,7 @@
-  <header class="app-header">
-    <h1 class="home-link"><%= link_to "Blanket BOSS", root_url %></h1>
+<header class="app-header">
+  <h1 class="home-link"><%= link_to "Blanket BOSS", root_url %></h1>
 
+  <% if current_user %>
     <nav>
       <ul class="main-menu">
         <li>
@@ -23,4 +24,5 @@
         </li>
       </ul>
     </nav>
-  </header>
+  <% end %>
+</header>
