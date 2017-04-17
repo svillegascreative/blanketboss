@@ -3,9 +3,24 @@
 
     <nav>
       <ul class="main-menu">
-        <li><%= link_to "See all blankets", blankets_path %></li>
-        <li><%= link_to "Add a blanket", new_blanket_path %></li>
-        <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        <li>
+          <%= link_to blankets_path do %>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <span>View Blankets</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_blanket_path do %>
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <span>Add Blanket</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to logout_path, method: :delete do %>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>Log Out</span>
+          <% end %>
+        </li>
       </ul>
     </nav>
   </header>

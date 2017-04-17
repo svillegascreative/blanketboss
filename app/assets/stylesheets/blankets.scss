@@ -19,33 +19,42 @@
 
 // BLANKET DISPLAY
 .blanket-link {
-  
+
 }
 .blanket-actions {
   float: right;
+  margin-left: $small-spacing;
+  i {
+    font-size: 1.2rem;
+    padding: 3px;
+    background: $base-background-color;
+  }
 }
+
 .blanket-list-card,
 .blanket-card {
   padding: $base-spacing;
-  img {
-    // border: 5px solid #fff;
-  }
 }
+
 .blanket-list-card {
   overflow: hidden;
   border-bottom: $base-border;
   &:first-of-type {
     border-top: $base-border;
   }
-  img {
-    width: 20%;
-    float: left;
-  }
   h3 {
     margin-left: 1em;
     float: left;
   }
 }
+.blanket-thumbnail {
+  width: 20%;
+  float: left;
+  img {
+    max-width: 100%;
+  }
+}
+
 .blanket-card {
   img {
     width: 100%;

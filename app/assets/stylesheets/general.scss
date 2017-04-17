@@ -24,16 +24,18 @@ main {
   position: absolute;
   z-index: 201;
   margin: $small-spacing;
+  max-width: 600px;
 }
 #content {
   background: $base-background-color;
 }
 #close {
-  position:absolute;
+  position: absolute;
   z-index: 202;
-  width:24px;
-  height:27px;
   display: block;
-  top:-7px;
-  right:-7px;
+  margin: 3px;
+  background: $base-background-color;
+  top: -3px;
+  right: 1px;
+  color: $base-font-color;
 }

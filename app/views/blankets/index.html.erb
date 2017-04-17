@@ -44,11 +44,13 @@
   <ul class="blanket-list">
     <% @blankets.each do |blanket| %>
       <li class="blanket-list-card">
-        <% if blanket.photo.present? %>
-          <%= link_to image_tag(blanket.photo), "/blankets/#{blanket.id}" %>
-        <% else %>
-          <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
-        <% end %>
+        <div class="blanket-thumbnail">
+          <% if blanket.photo.present? %>
+            <%= link_to image_tag(blanket.photo), "/blankets/#{blanket.id}" %>
+          <% else %>
+            <%= link_to image_tag("http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg"), "/blankets/#{blanket.id}" %>
+          <% end %>
+        </div>
         <h3><%= link_to blanket.name, "/blankets/#{blanket.id}", class: "blanket-link modal-trigger" %></h3>
       </li>
     <% end %>
@@ -58,5 +60,5 @@
 <div id="overlay"></div>
 <div id="modal">
   <div id="content"></div>
-  <a href="#" id="close">X</a>
+  <a href="#" id="close"><i class="fa fa-window-close" aria-hidden="true"></i></a>
 </div>
