@@ -1,5 +1,12 @@
-<h1 class="title"><span>Blanket</span>BOSS</h1>
+  <div class="homepage-brand">
+    <div class="blanket-logo">
+      <%= image_tag "blanket-boss-horse-beige", alt: "Blanket Boss logo" %>
+    </div>
+    <h1 class="title">Blanket<span>BOSS</span></h1>
+  </div>
 
-<%= render "sessions/form" %>
+  <div class="homepage-login">
+    <%= render "sessions/form" %>
 
-<%= link_to "Register", new_user_path %>
+    <%= link_to "Register", new_user_path %>
+  </div>

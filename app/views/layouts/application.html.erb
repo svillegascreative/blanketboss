@@ -11,13 +11,15 @@
 
   <body>
 
-  <%= render :partial => "header" unless request.url == root_url %>
+    <% if request.url == root_url %>
+      <%= yield %>
+    <% else %>
+      <%= render :partial => "header" %>
+      <main>
+        <%= yield %>
+      </main>
+    <% end %>
 
-  <main>
-
-    <%= yield %>
-
-  </main>
 
   <footer>
     <%= link_to("About", about_url) %> |
