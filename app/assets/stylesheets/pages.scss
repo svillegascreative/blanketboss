@@ -1,10 +1,23 @@
 // HOME
-.homepage-brand {
-  margin: 2rem;
+.home-top {
+  @include grid-container;
+  background: $secondary-background-color;
+  @include grid-visual;
+  padding: 2rem;
 }
+.home-top-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home-brand {
+  @include grid-column(10);
+  @include grid-push(1);
+}
+
 .blanket-logo {
-  max-width: 380px;
-  width: 50%;
+  // max-width: 380px;
+  // width: 50%;
   margin: 0 auto;
   background: url("http://i.ebayimg.com/images/g/lysAAMXQlgtSzZZg/s-l400.jpg") repeat;
   img {
@@ -23,12 +36,34 @@
     display: block;
   }
 }
+
+.home-top-content {
+  @include grid-column(10);
+  @include grid-push(1);
+}
 .subtitle {
   text-align: center;
 }
-
-.homepage-login {
-  margin: 0 auto;
-  max-width: 400px;
+.home-login {
 }
+
+@media (min-width: $medium-screen) {
+  .home-brand,
+  .home-top-content {
+    @include grid-column(6);
+    @include grid-push(3);
+  }
+}
+
+@media (min-width: $large-screen) {
+  .home-brand {
+    @include grid-column(5);
+    @include grid-push(0);
+  }
+  .home-top-content {
+    @include grid-column(7);
+    @include grid-push(0);
+  }
+}
+
 // ABOUT
