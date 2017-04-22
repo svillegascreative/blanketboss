@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   var mouseX, mouseY;
   var ww = $( window ).width();
   var wh = $( window ).height();
@@ -8,6 +9,7 @@ $(document).ready(function(){
     mouseY = e.pageY;
     traX = ((mouseX) / 50) ;
     traY = ((mouseY) / 10);
-    $(".title").css({"background-position": traX + "%" + traY + "%"});
+    $(".blanket-logo").css({"background-position": traX + "%" + traY + "%"});
   });
+
 });
