@@ -3,7 +3,7 @@
   margin: 2rem;
 }
 .blanket-logo {
-  max-width: 600px;
+  max-width: 380px;
   width: 50%;
   margin: 0 auto;
   background: url("http://i.ebayimg.com/images/g/lysAAMXQlgtSzZZg/s-l400.jpg") repeat;
@@ -22,6 +22,9 @@
     font-size: 1.5em;
     display: block;
   }
+}
+.subtitle {
+  text-align: center;
 }
 
 .homepage-login {
