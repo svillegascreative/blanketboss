@@ -1,12 +1,11 @@
 .app-header {
-  // @include clearfix;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
   padding: $small-spacing;
-  background: $base-background-color;
-  box-shadow: 0 2px 5px #ccc;
+  background: $secondary-background-color;
+  box-shadow: 0 2px 5px #888;
 }
 
 .home-link {
@@ -24,5 +23,17 @@ nav {
   li {
     display: inline;
     margin: 0 $small-spacing;
+    i {
+      font-size: 1.3em;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .main-menu li span {
+    display: initial;
   }
 }
