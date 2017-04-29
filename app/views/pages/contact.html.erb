@@ -1,0 +1,18 @@
+<h1 id="contact">Feedback?</h1>
+<p>Comments about BlanketBoss? Suggestions? Bugs? Let me know by filling out the form below. <em>Note: This form doesn't work yet!</em></p>
+
+<%= form_tag("/", method: "post") do %>
+  <div>
+    <%= label_tag(:name, "Name") %>
+    <%= text_field_tag(:name) %>
+  </div>
+  <div>
+    <%= label_tag(:email, "Email") %>
+    <%= text_field_tag(:email) %>
+  </div>
+  <div>
+    <%= label_tag(:feedback, "Feedback") %>
+    <%= text_area_tag(:feedback) %>
+  </div>
+  <%= submit_tag("Send") %>
+<% end %>
