@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       auto_login(@user)
       redirect_to blankets_path, notice: "Registration successful!"
+      UserMailer.welcome_email(@user).deliver_now
     else
       flash.now[:alert] = "Registration failed."
       render :new
