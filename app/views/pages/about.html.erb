@@ -1,33 +1,22 @@
-<h2>BlanketBoss:<br />
-your equine wardrobe manager!</h2>
+<div class="about-top">
+  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/8f/5A_Horse_Blankets_(3092760339).jpg", class: "about-image" %>
+  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/5/5e/5A_Horse_Blankets_%283093783296%29.jpg", class: "about-image" %>
+</div>
 
-<p>
-  Many horse owners choose to stable our horses, and ride and train them year-round. Often, this means we need to manage their coat growth, and supplement their care with blankets. Sometimes many blankets. Sometimes... entire wardrobes.
-</p>
-<p>
-  Whether you have one horse with many blankets of different types, blankets for home and for show, or multiple horses each with their own blankets, BlanketBoss will help you keep track of them all.
-</p>
+<div id="about">
+  <h1>A <em>blanket</em> manager?</h1>
+  <p>
+    Yes, indeed. Horsemen have long used blankets of different styles to keep their mounts comfortable in cold climates, and we have not let that practice go to this day. With so many horses being stabled and clipped for recreational use, blanket manufacturers have created hundreds of styles and models of blankets. Whether you own a few or a few dozen, Blanket Boss is here to help you keep track of your equine wardrobe.
+  </p>
 
-<h3>Who made this?</h3>
-<p>
-  BlanketBoss was built and developed by sylvia villegas. Yay!
-</p>
 
-<h3 id="contact">Feedback?</h3>
-<p>Comments about BlanketBoss? Suggestions? Bugs? Let me know by filling out the form below. <em>Note: This form doesn't work yet!</em></p>
-
-<%= form_tag("/", method: "post") do %>
-  <div>
-    <%= label_tag(:name, "Name") %>
-    <%= text_field_tag(:name) %>
-  </div>
-  <div>
-    <%= label_tag(:email, "Email") %>
-    <%= text_field_tag(:email) %>
-  </div>
-  <div>
-    <%= label_tag(:feedback, "Feedback") %>
-    <%= text_area_tag(:feedback) %>
-  </div>
-  <%= submit_tag("Send") %>
-<% end %>
+  <h2>How to use Blanket Boss</h2>
+  <h4>Sign up!</h4>
+  <p>
+    Start by creating your <%= link_to "free Blanket Boss account", new_user_url %>.
+  </p>
+  <h4>Add blankets</h4>
+  <p><%= link_to "Add a blanket", new_blanket_url %> by filling in details about your blanket. Give it a meaningful name (this will appear in lists).</p>
+  <h4>Review your list</h4>
+  <p>All of your blankets will be sorted alphabetically by name in a <%= link_to "master list", blankets_url %>. You can use the filters to view only a selection of blankets.</p>
+</div>

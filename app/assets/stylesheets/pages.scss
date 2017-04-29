@@ -1,13 +1,16 @@
 // HOME
-.home-top {
+.home-container {
   @include grid-container;
-  background: $secondary-background-color;
-  @include grid-visual;
+  // @include grid-visual;
   padding: 2rem;
 }
-.home-top-inner {
+.home-inner {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+#home-top {
+  background: $secondary-background-color;
 }
 
 .home-brand {
@@ -45,6 +48,8 @@
   text-align: center;
 }
 .home-login {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 @media (min-width: $medium-screen) {
@@ -67,3 +72,18 @@
 }
 
 // ABOUT
+.about-top {
+  @include clearfix;
+}
+.about-image {
+  width: calc(50% - 1rem);
+  margin: 0.5rem;
+  float: left;
+}
+
+@media (min-width: $medium-screen) {
+  .about-image {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+  }
+}
