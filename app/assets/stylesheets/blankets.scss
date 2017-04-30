@@ -1,6 +1,7 @@
 // List filters
 .blanket-filters {
-  margin-bottom: $base-spacing;
+  margin: 0 auto $base-spacing;
+  max-width: 600px;
   .filter-input {
     display: inline-block;
     margin-right: $small-spacing;
@@ -18,6 +19,10 @@
 
 
 // BLANKET DISPLAY
+.blanket-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
 .blanket-link {
 
 }
@@ -42,15 +47,12 @@
   &:first-of-type {
     border-top: $base-border;
   }
-  h3 {
-    margin-left: 1em;
-    float: left;
-  }
 }
 .blanket-thumbnail {
   width: 100px;
   height: 100px;
   float: left;
+  margin-right: $base-spacing;
   background: center;
   background-size: cover;
 }
