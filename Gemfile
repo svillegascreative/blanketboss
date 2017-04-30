@@ -39,6 +39,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'sorcery'
 
 gem 'carrierwave'
+gem 'fog-aws'
 
 
 # Use Capistrano for deployment
