@@ -1,24 +1,5 @@
-# README
+# Blanket Boss
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is built for equestrians who make sure their horses are always comfortably dressed!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Whether you have one horse or multiple, and especially if you ride competitively, chances are you own a few blankets, coolers, etc. Blanket Boss lets you catalog them so you never lose track of what you have, where it is, and what shape it's in!
