@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
     if login(params[:email], params[:password])
       redirect_to blankets_path, notice: "Login successful!"
     else
-      flash.now[:alert] = "Login failed"
-      render action: new
+      redirect_to root_url, alert: "Login failed"
     end
   end
 
