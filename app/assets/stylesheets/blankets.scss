@@ -1,7 +1,7 @@
 // List filters
 .blanket-filters {
   margin: 0 auto $base-spacing;
-  max-width: 600px;
+  max-width: $medium-screen;
   .filter-input {
     display: inline-block;
     margin-right: $small-spacing;
@@ -20,7 +20,7 @@
 
 // BLANKET DISPLAY
 .blanket-list {
-  max-width: 600px;
+  max-width: $medium-screen;
   margin: 0 auto;
 }
 .blanket-link {
@@ -70,7 +70,7 @@
 
 // BLANKET FORM
 #blanket-form {
-  max-width: 600px;
+  max-width: $medium-screen;
   margin: 0 auto;
 }
 .status-label {
