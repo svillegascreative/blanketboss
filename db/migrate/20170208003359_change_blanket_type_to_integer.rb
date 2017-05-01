@@ -1,5 +1,5 @@
 class ChangeBlanketTypeToInteger < ActiveRecord::Migration[5.0]
   def change
-    change_column :blankets, :blanket_type, :integer
+    # change_column :blankets, :blanket_type, :integer
   end
 end
