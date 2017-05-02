@@ -40,6 +40,7 @@ gem 'sorcery'
 
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'mini_magick'
 
 
 # Use Capistrano for deployment
