@@ -4,8 +4,8 @@ $(document).ready(function() {
   $('.filter-select').SumoSelect();
   $('.filter-select-multiple').SumoSelect({placeholder: 'All'});
 
-  // Blanket view
-  $('.blanket-link').on('click', function(event) {
+  // Blanket view in modal
+  $('.blanket-thumbnail, .blanket-link').on('click', function(event) {
     event.preventDefault();
 
     $.ajax({
