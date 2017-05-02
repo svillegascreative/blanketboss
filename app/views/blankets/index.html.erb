@@ -44,11 +44,7 @@
   <ul class="blanket-list">
     <% @blankets.each do |blanket| %>
       <li class="blanket-list-card">
-          <% if blanket.photo.present? %>
-            <%= link_to "", "/blankets/#{blanket.id}", class: "blanket-thumbnail", style: "background-image: url(#{blanket.photo_url})" %>
-          <% else %>
-            <%= link_to "", "/blankets/#{blanket.id}", class: "blanket-thumbnail", style: "background-image: url(http://www.paleopassionfoods.com/skin/frontend/default/default/images/noimage.jpg)" %>
-          <% end %>
+          <%= link_to "", "/blankets/#{blanket.id}", class: "blanket-thumbnail", style: "background-image: url(#{blanket.photo.thumb.url})" %>
         <h3><%= link_to blanket.name, "/blankets/#{blanket.id}", class: "blanket-link modal-trigger" %></h3>
       </li>
     <% end %>
