@@ -103,7 +103,7 @@
 # BlanketType.create(blanket_type: "therapeutic")
 # BlanketType.create(blanket_type: "accessory")
 
-
+# Status.create(name: "in use")
 # Status.create(name: "clean")
 # Status.create(name: "needs cleaning")
 # Status.create(name: "sent for cleaning")
