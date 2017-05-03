@@ -39,7 +39,6 @@
     display: block;
   }
 }
-
 .home-top-content {
   @include grid-column(10);
   @include grid-push(1);
@@ -51,6 +50,37 @@
   max-width: 400px;
   margin: 0 auto;
 }
+
+#home-main {
+  h2 {
+    text-align: center;
+  }
+  section {
+    position: relative;
+    margin: 2rem 0;
+  }
+  p {
+    position: relative;
+    padding: 3rem 2rem;
+  }
+  .button {
+    margin: $base-spacing;
+  }
+}
+.p-bg {
+  filter: opacity(0.5);
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+.p-bg-image1 {
+  background: $secondary-background-color url("https://upload.wikimedia.org/wikipedia/commons/0/03/Winter_play_2.png") 50% 50%/cover;
+}
+.p-bg-image2 {
+  background: $secondary-background-color url("https://upload.wikimedia.org/wikipedia/commons/3/34/%27Cavalli_della_Madonna%27_im_Marstall_des_Klosters_Einsiedeln_2013-01-26_14-11-05_%28P7700%29.JPG") 50% 50%/cover;
+}
+
 
 @media (min-width: $medium-screen) {
   .home-brand,
