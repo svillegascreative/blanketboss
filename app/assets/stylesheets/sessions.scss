@@ -6,11 +6,13 @@
 }
 
 @media (min-width: 460px) {
-  input {
-    display: inline-block;
-  }
-  input:not(.submit) {
-    width: 40%;
-    max-width: 300px;
+  #home-login {
+    input {
+      display: inline-block;
+    }
+    input:not(.submit) {
+      width: 40%;
+      max-width: 300px;
+    }
   }
 }
