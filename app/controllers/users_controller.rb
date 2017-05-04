@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      auto_login(@user)
+      auto_login(@user, should_remember = false)
       redirect_to blankets_path, notice: "Registration successful!"
       UserMailer.welcome_email(@user).deliver_now
     else

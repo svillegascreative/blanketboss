@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if login(params[:email], params[:password])
+    if login(params[:email], params[:password], params[:remember])
       redirect_to blankets_path, notice: "Login successful!"
     else
-      redirect_to root_url, alert: "Login failed"
+      redirect_to new_session_path, alert: "Login failed"
     end
   end
 
