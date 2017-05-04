@@ -85,3 +85,10 @@ select {
 .form-field {
   margin-bottom: $base-spacing * 1.5;
 }
+.form-checkbox {
+  display: inline-block;
+  label {
+    display: inline;
+    font-weight: normal;
+  }
+}

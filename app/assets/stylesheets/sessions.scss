@@ -4,6 +4,13 @@
   padding-bottom: 0;
   clear: both;
   transition: all ease 0.3s;
+  .form-field {
+    margin: 0;
+  }
+  .submit {
+    display: inline-block;
+    margin-left: $base-spacing;
+  }
 }
 .hide-login {
   padding: 0;
@@ -14,10 +21,15 @@
 
 @media (min-width: 460px) {
   .home-login {
-    input {
+    .form-field {
       display: inline-block;
+      width: 49%;
     }
-    input:not(.submit) {
+  }
+}
+@media (min-width: $medium-screen) {
+  .home-login {
+    .form-field {
       width: 40%;
       max-width: 300px;
     }
