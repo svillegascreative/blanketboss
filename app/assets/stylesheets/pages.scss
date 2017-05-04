@@ -2,11 +2,15 @@
 .home-container {
   @include grid-container;
   // @include grid-visual;
-  padding: 2rem;
+  padding: $base-spacing;
 }
 .home-inner {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+#home-login {
+  padding: $small-spacing;
 }
 
 #home-top {

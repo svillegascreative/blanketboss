@@ -1,3 +1,7 @@
+<div class="home-container" id="home-login">
+  <%= render "sessions/form" %>
+</div>
+
 <div class="home-container" id="home-top">
 
   <div class="home-inner">
@@ -10,12 +14,7 @@
 
     <div class="home-top-content">
       <h3 class="subtitle">Your Equine Wardrobe Manager</h3>
-
-      <div class="home-login">
-        <%= render "sessions/form" %>
-
-        <%= link_to "Register", new_user_path %>
-      </div>
+      <%= link_to "Register", new_user_path %>
     </div>
   </div>
 
