@@ -3,6 +3,13 @@
   padding: $small-spacing;
   padding-bottom: 0;
   clear: both;
+  transition: all ease 0.3s;
+}
+.hide-login {
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  transition: all ease 0.3s;
 }
 
 @media (min-width: 460px) {

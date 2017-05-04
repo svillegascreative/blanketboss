@@ -35,7 +35,7 @@
           <%= link_to "Contact", contact_url %>
         </li>
         <li>
-          <%= link_to "Log in", new_session_url %>
+          <%= link_to "Log in", new_session_url, class: "login-link" %>
         </li>
         <li>
           <%= link_to "Sign up!", new_user_url, class: "button" %>
@@ -44,8 +44,9 @@
     </nav>
   <% end %>
 
-<div class="home-login">
+<div class="home-login hide-login">
   <%= render "sessions/form" %>
+  <i class="fa fa-chevron-up login-close" aria-hidden="true"></i>
 </div>
 
 </header>
