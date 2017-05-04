@@ -1,0 +1,22 @@
+<h1>Reset your password</h1>
+
+<%= form_for @user, url: password_reset_path(@token), method: :put do |f| %>
+  <%# render "shared/errors", object: @user %>
+
+  <div class="form-field">
+    <%= f.label :email, "Email" %>
+    <%= @user.email %>
+  </div>
+  <div class="form-field">
+    <%= f.label :password, "New password" %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="form-field">
+    <%= f.label :password_confirmation, "Retype your new password" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
