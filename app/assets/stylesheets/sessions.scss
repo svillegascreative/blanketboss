@@ -1,11 +1,12 @@
-#home-login {
+.home-login {
   text-align: center;
-  background: $secondary-background-color;
   padding: $small-spacing;
+  padding-bottom: 0;
+  clear: both;
 }
 
 @media (min-width: 460px) {
-  #home-login {
+  .home-login {
     input {
       display: inline-block;
     }

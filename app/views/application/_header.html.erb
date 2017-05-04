@@ -1,4 +1,5 @@
 <header class="app-header">
+
   <h1 class="home-link"><%= link_to "Blanket BOSS", root_url %></h1>
 
   <% if current_user %>
@@ -42,4 +43,9 @@
       </ul>
     </nav>
   <% end %>
+
+<div class="home-login">
+  <%= render "sessions/form" %>
+</div>
+
 </header>
