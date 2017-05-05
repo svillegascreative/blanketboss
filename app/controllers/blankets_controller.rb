@@ -26,8 +26,9 @@ class BlanketsController < ApplicationController
   def create
     @blanket = Blanket.new(blanket_params)
     if @blanket.save
-      redirect_to @blanket
+      redirect_to @blanket, success: "Your blanket was added successfully!"
     else
+      flash.now[:error] = "Oops, there was problem. Please try again."
       render :new
     end
   end
@@ -40,8 +41,9 @@ class BlanketsController < ApplicationController
     find_blanket
 
     if @blanket.update_attributes(blanket_params)
-      redirect_to "/blankets/#{@blanket.id}"
+      redirect_to "/blankets/#{@blanket.id}", success: "Your blanket was updated successfully!"
     else
+      flash.now[:error] = "Oops, there was problem. Please try again."
       render :edit
     end
   end
