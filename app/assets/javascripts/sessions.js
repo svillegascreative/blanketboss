@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $('.login-link').on('click', function(e) {
     e.preventDefault();
-    $('.home-login').removeClass('hide-login');
+    $('.home-login').toggleClass('hide-login');
   });
   $('.login-close').on('click', function(e) {
     e.preventDefault();

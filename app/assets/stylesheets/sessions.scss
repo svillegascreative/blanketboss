@@ -15,6 +15,7 @@
 .hide-login {
   padding: 0;
   opacity: 0;
+  visibility: hidden;
   height: 0;
   transition: all ease 0.3s;
 }
