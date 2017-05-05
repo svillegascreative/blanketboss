@@ -9,7 +9,7 @@ main {
   margin: 0 auto;
 }
 
-// modal
+// MODALS
 #overlay {
   display: none;
   position: fixed;
@@ -41,4 +41,47 @@ main {
   top: -3px;
   right: 1px;
   color: $base-font-color;
+}
+
+
+// FLASHES
+
+.flash {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  i {
+    float: right;
+    cursor: pointer;
+  }
+}
+
+$flashes: (
+"alert": #fff6bf,
+"error": #fbe3e4,
+"notice": #e5edf8,
+"success": #e6efc2,
+) !default;
+
+@each $flash-type, $color in $flashes {
+  .flash-#{$flash-type} {
+    background-color: $color;
+    color: shade($color, 60%);
+    border: 2px solid shade($color, 60%);
+    display: block;
+    margin-bottom: $small-spacing;
+    padding: $small-spacing;
+    text-align: center;
+    box-shadow: 2px 2px 2px shade($color, 40%);
+
+    a {
+      color: shade($color, 70%);
+      text-decoration: underline;
+
+      &:focus,
+      &:hover {
+        color: shade($color, 90%);
+      }
+    }
+  }
 }

@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <% flash.each do |key, message| %>
+      <div class="flash flash-<%= key %> animated fadeInDown">
+        <%= message %>
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+    <% end %>
 
     <%= render :partial => "header" %>
     <% if request.url == root_url %>
