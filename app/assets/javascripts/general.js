@@ -11,6 +11,6 @@ $(document).ready(function(){
   $('.flash i').on('click', function(e) {
     $('.flash').slideUp(200);
   });
-  // $('.flash').delay(3000).slideUp(1000);
+  $('.flash').delay(3000).slideUp(1000);
 
 });
