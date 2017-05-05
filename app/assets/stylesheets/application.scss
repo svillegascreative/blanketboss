@@ -8,6 +8,9 @@
 @import 'neat';
 @import 'bourbon';
 
+// animations
+@import 'animation';
+
 // base styles - Bourbon
 @import 'base/variables';
 @import 'base/grid-settings'; // Neat
