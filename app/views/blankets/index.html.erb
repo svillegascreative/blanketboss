@@ -1,3 +1,4 @@
+<%= link_to "Download CSV", request.query_parameters.merge(format: "csv") %>
 <div class="blanket-filters">
   <%= form_tag blankets_path, method: :get do %>
     <div class="filter-input">
