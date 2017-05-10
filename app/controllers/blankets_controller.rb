@@ -8,6 +8,7 @@ class BlanketsController < ApplicationController
     respond_to do |format|
       format.html
       format.text { render 'index.txt.erb' }
+      format.csv { send_data @blankets.to_csv }
     end
   end
 

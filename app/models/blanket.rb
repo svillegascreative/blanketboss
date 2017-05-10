@@ -11,6 +11,18 @@ class Blanket < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
+  def self.to_csv
+    attributes = %w(name blanket_size brand blanket_type_name colour trim status_names note)
+
+    CSV.generate do |csv|
+      csv << %W(Name Size Brand Type Colour Trim Status Note)
+
+      all.each do |blanket|
+        csv << attributes.map{ |attr| blanket.send(attr)}
+      end
+    end
+  end
+
   def blanket_type_name
     BlanketType.find(self.blanket_type_id).blanket_type
   end
