@@ -1,7 +1,7 @@
 <h1 id="contact">Feedback?</h1>
-<p>Comments about BlanketBoss? Suggestions? Bugs? Let me know by filling out the form below. <em>Note: This form doesn't work yet!</em></p>
+<p>Comments about BlanketBoss? Suggestions? Bugs? Let me know by filling out the form below.</p>
 
-<%= form_tag("/", method: "post") do %>
+<%= form_tag("/contact", method: "post") do %>
   <div>
     <%= label_tag(:name, "Name") %>
     <%= text_field_tag(:name) %>
