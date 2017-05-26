@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # pages
   get "about" => "pages#about", as: "about"
   get "contact" => "pages#contact", as: "contact"
+  post "contact" => "pages#send_contact_form"
   get "search" => "pages#search"
 
   resources :blankets
