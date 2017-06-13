@@ -1,7 +1,44 @@
+// tabs
+.accordion-tabs {
+  @include clearfix;
+  margin: $small-spacing 0;
+
+  .tab-header-and-content {
+    list-style: none;
+
+    @media (min-width: $medium-screen) {
+      display: inline;
+    }
+  }
+
+  .tab-link {
+    display: block;
+    padding: 8px;
+
+    @media (min-width: $medium-screen) {
+      display: inline-block;
+    }
+  }
+
+  .is-active {
+    background: $secondary-background-color;
+  }
+
+  .tab-content {
+    display: none;
+    width: 100%;
+    padding: $small-spacing;
+    background: $secondary-background-alpha;
+
+    @media (min-width: $medium-screen) {
+      float: left;
+    }
+  }
+}
+
 // List filters
 .blanket-filters {
-  margin: 0 auto $base-spacing;
-  max-width: $medium-screen;
+  text-align: center;
   .filter-input {
     display: inline-block;
     margin-right: $small-spacing;

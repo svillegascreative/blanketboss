@@ -1,43 +1,67 @@
 <h1>Blankets</h1>
 
-<%= link_to "Download CSV", request.query_parameters.merge(format: "csv") %>
-<div class="blanket-filters">
-  <%= form_tag blankets_path, method: :get do %>
-    <div class="filter-input">
-      <%= label_tag "blanket_sizes", "Size:" %>
-      <%= collection_select(nil,
-                            :blanket_size,
-                            current_user.blankets.select(:blanket_size).distinct.order("blanket_size ASC"),
-                            :blanket_size,
-                            :blanket_size,
-                            {prompt: "All"},
-                            {name: "blanket_size", class: "filter-select"}) %>
+
+<ul class="accordion-tabs">
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="is-active tab-link">Filter</a>
+    <div class="tab-content">
+      <div class="blanket-filters">
+        <%= form_tag blankets_path, method: :get do %>
+          <div class="filter-input">
+            <%= label_tag "blanket_sizes", "Size:" %>
+            <%= collection_select(nil,
+                                  :blanket_size,
+                                  current_user.blankets.select(:blanket_size).distinct.order("blanket_size ASC"),
+                                  :blanket_size,
+                                  :blanket_size,
+                                  {prompt: "All"},
+                                  {name: "blanket_size", class: "filter-select"}) %>
+          </div>
+          <div class="filter-input">
+            <%= label_tag "blanket_type_id", "Type:" %>
+            <%= collection_select(nil,
+                                  :blanket_type_id,
+                                  BlanketType.all,
+                                  :id,
+                                  :blanket_type,
+                                  {prompt: "All"},
+                                  {name: "blanket_type_id", class: "filter-select"}) %>
+          </div>
+          <div class="filter-input">
+            <%= label_tag "status_ids", "Status:" %>
+            <%= collection_select(nil,
+                                  :status_ids,
+                                  Status.all,
+                                  :id,
+                                  :name,
+                                  {},
+                                  {multiple: true, name: "status_ids", class: "filter-select-multiple"}) %>
+          </div>
+          <div class="filter-input">
+            <%= submit_tag "Filter", name: nil %>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="filter-input">
-      <%= label_tag "blanket_type_id", "Type:" %>
-      <%= collection_select(nil,
-                            :blanket_type_id,
-                            BlanketType.all,
-                            :id,
-                            :blanket_type,
-                            {prompt: "All"},
-                            {name: "blanket_type_id", class: "filter-select"}) %>
+  </li>
+
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="tab-link">Download</a>
+    <div class="tab-content">
+      <%= link_to "Download CSV", request.query_parameters.merge(format: "csv") %>
     </div>
-    <div class="filter-input">
-      <%= label_tag "status_ids", "Status:" %>
-      <%= collection_select(nil,
-                            :status_ids,
-                            Status.all,
-                            :id,
-                            :name,
-                            {},
-                            {multiple: true, name: "status_ids", class: "filter-select-multiple"}) %>
+  </li>
+
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="tab-link">Email</a>
+    <div class="tab-content">
+      Coming soon!
     </div>
-    <div class="filter-input">
-      <%= submit_tag "Filter", name: nil %>
-    </div>
-  <% end %>
-</div>
+  </li>
+</ul>
+
+
+
 
 <% if @blankets.empty? %>
   <p>
