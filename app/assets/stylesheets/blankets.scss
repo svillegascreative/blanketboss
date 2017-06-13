@@ -1,4 +1,4 @@
-// tabs
+// TABS
 .accordion-tabs {
   @include clearfix;
   margin: $small-spacing 0;
@@ -10,7 +10,6 @@
       display: inline;
     }
   }
-
   .tab-link {
     display: block;
     padding: 8px;
@@ -19,11 +18,9 @@
       display: inline-block;
     }
   }
-
   .is-active {
     background: $secondary-background-color;
   }
-
   .tab-content {
     display: none;
     width: 100%;
@@ -36,7 +33,7 @@
   }
 }
 
-// List filters
+// LIST FILTERS
 .blanket-filters {
   text-align: center;
   .filter-input {
@@ -55,7 +52,7 @@
 }
 
 
-// BLANKET DISPLAY
+// BLANKET LIST
 .blanket-list {
   max-width: $medium-screen;
   margin: 0 auto;
@@ -73,16 +70,16 @@
   }
 }
 
-.blanket-list-card,
-.blanket-card {
-  padding: $base-spacing;
-}
-
 .blanket-list-card {
+  padding: $base-spacing;
   overflow: hidden;
   border-bottom: $base-border;
   &:first-of-type {
     border-top: $base-border;
+  }
+  &:hover {
+    background: $secondary-background-alpha;
+    transition: 0.3s ease;
   }
 }
 .blanket-thumbnail {
@@ -94,7 +91,9 @@
   background-size: cover;
 }
 
+// BLANKET DISPLAY
 .blanket-card {
+  padding: $base-spacing;
   img {
     width: 100%;
   }
