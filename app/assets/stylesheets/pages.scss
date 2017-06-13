@@ -15,6 +15,7 @@
   // background: $secondary-background-color;
   position: relative;
   min-height: 500px;
+  text-align: center;
   &:before {
     content: '';
     position: absolute;
@@ -22,10 +23,15 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(150deg, $dark-blue, rgba(1,1,1,0), $secondary-background-color);
-    opacity: 0.8;
+    background-image: linear-gradient(150deg, $dark-blue, $secondary-background-color);
+    opacity: 0.5;
+  }
+  h3 {
+    font-weight: normal;
+    margin-top: 3rem;
   }
 }
+
 .home-top-bg {
   background: url('blanket-piles-angled.jpg') center center no-repeat;
   background-size: cover;
@@ -35,7 +41,7 @@
   left: 0;
   right: 0;
   z-index: -1;
-  filter: opacity(0.3) contrast(1.2) saturate(0.7)
+  filter: opacity(0.5) contrast(1.2) saturate(0.7)
 }
 .home-brand {
   color:#fff;
@@ -47,7 +53,6 @@
   font-size: 4em;
   font-weight: bold;
   line-height: 0.8;
-  text-align: center;
   margin-top: $base-spacing;
   span {
     font-size: 1.45em;
@@ -84,18 +89,10 @@
   }
   h2 {
     text-align: center;
-    width: 45%;
-    float: left;
     color: $blue;
     padding: $base-spacing;
   }
   p {
-    position: relative;
-    background: rgba(215, 206, 199, 0.7);
-    margin: $base-spacing;
-    padding: $base-spacing;
-    width: 45%;
-    float: right;
   }
   .button {
     float: right;
@@ -103,33 +100,26 @@
     margin: $base-spacing;
   }
 }
-.p-bg {
-  filter: opacity(0.5);
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-}
-.p-bg-image1 {
-  background: $secondary-background-color url("https://upload.wikimedia.org/wikipedia/commons/0/03/Winter_play_2.png") 50% 50%/cover;
-}
-.p-bg-image2 {
-  background: $secondary-background-color url("https://upload.wikimedia.org/wikipedia/commons/3/34/%27Cavalli_della_Madonna%27_im_Marstall_des_Klosters_Einsiedeln_2013-01-26_14-11-05_%28P7700%29.JPG") 50% 50%/cover;
-}
+// .p-bg {
+//   filter: opacity(0.5);
+//   position: absolute;
+//   z-index: -1;
+//   height: 100%;
+//   width: 100%;
+// }
+// .p-bg-image1 {
+//   background: $secondary-background-color url("https://upload.wikimedia.org/wikipedia/commons/0/03/Winter_play_2.png") 50% 50%/cover;
+// }
+// .p-bg-image2 {
+//   background: $secondary-background-color url("https://upload.wikimedia.org/wikipedia/commons/3/34/%27Cavalli_della_Madonna%27_im_Marstall_des_Klosters_Einsiedeln_2013-01-26_14-11-05_%28P7700%29.JPG") 50% 50%/cover;
+// }
 
 
 @media (min-width: $medium-screen) {
 }
 
 @media (min-width: $large-screen) {
-  .home-brand {
-    @include grid-column(5);
-  }
-  .home-top-content {
-    @include grid-column(7);
-    top: 15rem;
-    text-align: right;
-  }
+
 }
 
 // ABOUT
