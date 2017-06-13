@@ -4,7 +4,6 @@
 <div class="blanket-filters">
   <%= form_tag blankets_path, method: :get do %>
     <div class="filter-input">
-      <%= label_tag "[blanket_sizes]", "Size:" %>
       <%= label_tag "blanket_sizes", "Size:" %>
       <%= collection_select(nil,
                             :blanket_size,
@@ -12,11 +11,9 @@
                             :blanket_size,
                             :blanket_size,
                             {prompt: "All"},
-                            {class: "filter-select"}) %>
                             {name: "blanket_size", class: "filter-select"}) %>
     </div>
     <div class="filter-input">
-      <%= label_tag "[blanket_type_id]", "Type:" %>
       <%= label_tag "blanket_type_id", "Type:" %>
       <%= collection_select(nil,
                             :blanket_type_id,
@@ -24,11 +21,9 @@
                             :id,
                             :blanket_type,
                             {prompt: "All"},
-                            {class: "filter-select"}) %>
                             {name: "blanket_type_id", class: "filter-select"}) %>
     </div>
     <div class="filter-input">
-      <%= label_tag "[status_ids]", "Status:" %>
       <%= label_tag "status_ids", "Status:" %>
       <%= collection_select(nil,
                             :status_ids,
@@ -36,7 +31,6 @@
                             :id,
                             :name,
                             {},
-                            {multiple: true, class: "filter-select-multiple"}) %>
                             {multiple: true, name: "status_ids", class: "filter-select-multiple"}) %>
     </div>
     <div class="filter-input">
