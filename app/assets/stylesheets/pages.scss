@@ -7,17 +7,63 @@
 .home-inner {
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
 }
 
 
 #home-top {
-  background: $secondary-background-color;
+  // background: $secondary-background-color;
+  position: relative;
+  min-height: 500px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(150deg, $dark-blue, rgba(1,1,1,0), $secondary-background-color);
+    opacity: 0.8;
+  }
+}
+.home-top-bg {
+  background: url('blanket-piles-angled.jpg') center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  filter: opacity(0.3) contrast(1.2) saturate(0.7)
+}
+.home-brand {
+  color:#fff;
+  text-shadow: 1px 1px 1px #888, 2px 2px 13px #444;
+  padding: $base-spacing;
+}
+.title {
+  font-family: $brand-font-family;
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 0.8;
+  text-align: center;
+  margin-top: $base-spacing;
+  span {
+    font-size: 1.45em;
+    display: block;
+  }
+}
+.subtitle {
+  text-align: center;
+}
+.home-top-content {
+  padding: $base-spacing;
+  color: $blue;
+  position: relative;
+  text-align: center;
 }
 
-.home-brand {
-  @include grid-column(10);
-  @include grid-push(1);
-}
 
 .blanket-logo {
   // max-width: 380px;
@@ -28,39 +74,32 @@
     display: block;
   }
 }
-.title {
-  font-family: $brand-font-family;
-  color: #000;
-  font-size: 4em;
-  font-weight: bold;
-  line-height: 0.8;
-  text-align: center;
-  span {
-    font-size: 1.5em;
-    display: block;
-  }
-}
-.home-top-content {
-  @include grid-column(10);
-  @include grid-push(1);
-}
-.subtitle {
-  text-align: center;
-}
 
 #home-main {
-  h2 {
-    text-align: center;
-  }
+  margin-top: 5rem;
   section {
     position: relative;
     margin: 2rem 0;
+    overflow: hidden;
+  }
+  h2 {
+    text-align: center;
+    width: 45%;
+    float: left;
+    color: $blue;
+    padding: $base-spacing;
   }
   p {
     position: relative;
-    padding: 3rem 2rem;
+    background: rgba(215, 206, 199, 0.7);
+    margin: $base-spacing;
+    padding: $base-spacing;
+    width: 45%;
+    float: right;
   }
   .button {
+    float: right;
+    clear: right;
     margin: $base-spacing;
   }
 }
@@ -80,21 +119,16 @@
 
 
 @media (min-width: $medium-screen) {
-  .home-brand,
-  .home-top-content {
-    @include grid-column(6);
-    @include grid-push(3);
-  }
 }
 
 @media (min-width: $large-screen) {
   .home-brand {
     @include grid-column(5);
-    @include grid-push(0);
   }
   .home-top-content {
     @include grid-column(7);
-    @include grid-push(0);
+    top: 15rem;
+    text-align: right;
   }
 }
 

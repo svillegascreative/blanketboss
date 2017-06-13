@@ -2,7 +2,7 @@
 #{$all-buttons} {
   appearance: none;
   background-color: $action-color;
-  border: 0;
+  border: 2px solid $action-color;
   border-radius: $base-border-radius;
   color: #fff;
   cursor: pointer;
@@ -32,5 +32,15 @@
     &:hover {
       background-color: $action-color;
     }
+  }
+}
+.button-outline {
+  border: 2px solid $action-color;
+  color: $action-color;
+  background: transparent;
+  &:hover,
+  &:focus {
+    background-color: transparentize($action-color, 0.8);
+    color: $action-color;
   }
 }

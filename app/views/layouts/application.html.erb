@@ -18,10 +18,10 @@
       </div>
     <% end %>
 
-    <%= render :partial => "header" %>
     <% if request.url == root_url %>
       <%= yield %>
     <% else %>
+    <%= render :partial => "header" %>
       <main>
         <%= yield %>
       </main>

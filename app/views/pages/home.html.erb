@@ -1,15 +1,24 @@
 <div class="home-container" id="home-top">
+  <div class="home-top-bg">
+
+  </div>
 
   <div class="home-inner">
-    <div class="home-brand">
+    <!-- <div class="home-brand">
       <div class="blanket-logo">
-        <%= image_tag "https://s3.ca-central-1.amazonaws.com/svillegas-blanketboss/site/blanket-boss-horse-beige.png", alt: "Blanket Boss logo" %>
+        <%# image_tag "https://s3.ca-central-1.amazonaws.com/svillegas-blanketboss/site/blanket-boss-horse-beige.png", alt: "Blanket Boss logo" %>
+        <%# image_tag "" %>
       </div>
-      <h1 class="title">Blanket<span>BOSS</span></h1>
-    </div>
+    </div> -->
 
+    <div class="home-brand">
+      <h1 class="title">Blanket<span>BOSS</span></h1>
+      <h2 class="subtitle">Your Equine Wardrobe Manager</h2>
+    </div>
     <div class="home-top-content">
-      <h3 class="subtitle">Your Equine Wardrobe Manager</h3>
+      <h3>You keep track of your horses. Keep track of their blankets,&nbsp;too.</h3>
+      <%= link_to "Log in", login_url, class: "button button-outline" %>
+      <%= link_to "Sign up!", new_user_path, class: "button" %>
     </div>
   </div>
 
@@ -17,15 +26,16 @@
 
 <div class="home-container" id="home-main">
   <div class="home-inner">
-    <h2>Well, <em>yeah</em>, horses have wardrobes!</h2>
     <section>
+      <h2>Well, <em>yeah</em>, horses have wardrobes!</h2>
       <div class="p-bg p-bg-image1"></div>
       <p>
         Many horse owners choose to stable our horses, and ride and train them year-round. Often, this means we need to manage their coat growth, and supplement their care with blankets. Sometimes many blankets. Sometimes... entire wardrobes.
       </p>
+      <%= link_to "Learn more", about_url, class: "button" %>
     </section>
-    <h2>Keep track of their clothes</h2>
     <section>
+      <h2>Keep track of their clothes</h2>
       <div class="p-bg p-bg-image2"></div>
       <p>
         Whether you have one horse with many blankets of different types, blankets for home and for show, or multiple horses each with their own collection of blankets, Blanket Boss will help you keep track of them all.
