@@ -1,9 +1,9 @@
 <div class="blanket-card">
   <div class="blanket-actions">
-    <%= link_to edit_blanket_path(@blanket) do %>
+    <%= link_to @blanket, method: :delete do %>
       <i class="fa fa-trash-o" aria-hidden="true"></i>
     <% end %> |
-    <%= link_to @blanket, method: :delete do %>
+    <%= link_to edit_blanket_path(@blanket) do %>
       <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
     <% end %>
   </div>
