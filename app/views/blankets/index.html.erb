@@ -1,5 +1,25 @@
-<h1>Blankets</h1>
-
+<h1><%= @blankets.count %> Blankets</h1>
+<% if @blanket_size.present? || @blanket_type.present? || @statuses.present? %>
+  <ul>
+    <% if @blanket_size.present? %>
+      <li>
+        Size: <%= @blanket_size %>
+      </li>
+    <% end %>
+    <% if @blanket_type.present? %>
+      <li>
+        Type: <%= @blanket_type %>
+      </li>
+    <% end %>
+    <% if @statuses.present? %>
+      <li>
+        Status: <% @statuses.each do |status| %>
+                  <%= status.name %>
+                <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 
 <ul class="accordion-tabs">
   <li class="tab-header-and-content">

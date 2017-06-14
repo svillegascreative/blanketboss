@@ -5,6 +5,14 @@ class BlanketsController < ApplicationController
     @blankets = current_user.blankets
                             .filter(params.slice(:blanket_size, :blanket_type_id, :status_ids))
                             .order("name ASC")
+    @blanket_size = params[:blanket_size]
+    if params[:blanket_type_id].present?
+      @blanket_type = BlanketType.find(params[:blanket_type_id]).blanket_type
+    end
+    if params[:status_ids].present?
+      @statuses = Status.where("id = ?", params[:status_ids])
+    end
+
     respond_to do |format|
       format.html
       format.text { render 'index.txt.erb' }
