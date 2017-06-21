@@ -5,7 +5,22 @@
   z-index: 100;
   padding: $small-spacing;
   background: $secondary-background-color;
-  box-shadow: 0 2px 5px #888;
+  box-shadow: 0 2px 5px $medium-gray;
+  a {
+    color: $blue;
+    &:hover,
+    &:active {
+      color: $dark-blue;
+    }
+  }
+  .button {
+    color: #fff;
+    padding: $small-spacing/2 $small-spacing;
+    &:hover,
+    &:active {
+      color: $light-gray;
+    }
+  }
 }
 
 .home-link {
@@ -30,7 +45,8 @@ nav {
       display: none;
     }
     button {
-      display: inline
+      display: inline;
+      color: #fff;
     }
   }
 }

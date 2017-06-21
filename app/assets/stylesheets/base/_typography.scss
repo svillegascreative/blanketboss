@@ -14,6 +14,7 @@ h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  color: $blue;
 }
 h1 {
   font-size: $base-font-size * 2.5;
@@ -33,14 +34,14 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $action-color;
   text-decoration: none;
   transition: color $base-duration $base-timing;
 
   &:active,
   &:focus,
   &:hover {
-    color: shade($blue, 25%);
+    color: shade($action-color, 75%);
   }
 }
 
