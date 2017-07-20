@@ -13,20 +13,10 @@
 
 
 #home-top {
-  // background: $secondary-background-color;
   position: relative;
   min-height: 500px;
   text-align: center;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(150deg, $dark-blue, $secondary-background-color);
-    opacity: 0.5;
-  }
+  overflow: hidden;
   h3 {
     font-weight: normal;
     margin-top: 3rem;
@@ -34,22 +24,37 @@
 }
 
 .home-top-bg {
-  background: url('blanket-piles-angled.jpg') center center no-repeat;
+  background: url('20160510_121906.jpg') center center no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-  filter: opacity(0.8) contrast(1.2) saturate(0.7)
+  z-index: -2;
+  filter: opacity(0.7);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: linear-gradient(150deg, $dark-blue, $secondary-background-color);
+    opacity: 0.5;
+  }
+}
+.blanket-logo {
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+  }
 }
 .home-brand {
-  // color:#fff;
-  // text-shadow: 1px 1px 1px #888, 2px 2px 13px #444;
   padding: $base-spacing;
-  margin: $base-spacing*3;
-  background: rgba(255,255,255, 0.6);
 }
 .title {
   font-family: $brand-font-family;
@@ -62,8 +67,11 @@
     display: block;
   }
 }
+.title,
 .subtitle {
   text-align: center;
+  color: $tan;
+  text-shadow: 2px 2px 5px #444, 0 0 9px #666;
 }
 .home-top-content {
   padding: $base-spacing;
@@ -73,15 +81,6 @@
 }
 
 
-.blanket-logo {
-  // max-width: 380px;
-  // width: 50%;
-  margin: 0 auto;
-  background: url("https://s3.ca-central-1.amazonaws.com/svillegas-blanketboss/site/baker-plaid.jpg") repeat;
-  img {
-    display: block;
-  }
-}
 
 #home-main {
   margin-top: 5rem;
