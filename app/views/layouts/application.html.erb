@@ -19,13 +19,14 @@
     <% end %>
 
     <% if request.url == root_url %>
-      <%= yield %>
-    <% else %>
-    <%= render :partial => "header" %>
-      <main>
-        <%= yield %>
-      </main>
+      <%= render :partial => "home-header" %>
     <% end %>
+
+    <%= render :partial => "header" %>
+    
+    <main>
+      <%= yield %>
+    </main>
 
 
   <footer>
