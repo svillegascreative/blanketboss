@@ -1,11 +1,7 @@
 .app-header {
-  position: fixed;
   width: 100%;
-  top: 0;
-  z-index: 100;
   padding: $small-spacing;
   background: $secondary-background-color;
-  box-shadow: 0 2px 5px $medium-gray;
   a {
     color: $blue;
     &:hover,
@@ -21,6 +17,12 @@
       color: $light-gray;
     }
   }
+}
+.app-header-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px $medium-gray;
 }
 
 .home-link {
