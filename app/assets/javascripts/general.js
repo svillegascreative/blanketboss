@@ -1,10 +1,29 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-  // push content down so it is not hidden under header
-  var headerHeight = $('.app-header').height();
+  var headerHeight = $('.app-header').outerHeight();
 
-  $('main').css('padding-top', headerHeight * 2);
-  $('#home-top').css('padding-top', headerHeight * 2);
+  $('main').css('padding-top', headerHeight);
+
+  if ($('.app-header-home').length) {
+    var appHeaderHomeTop = $('.app-header-home').offset().top;
+  }
+
+  $(window).on('scroll', function() {
+    var appHeaderHome = $('.app-header-home');
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= appHeaderHomeTop) {
+      appHeaderHome.addClass('app-header-fixed');
+      $('.home-link').fadeIn();
+      $('#home-top').css('margin-bottom', headerHeight);
+    } else {
+      appHeaderHome.removeClass('app-header-fixed')
+      $('.home-link').fadeOut();
+      $('#home-top').css('margin-bottom', 0);
+    }
+  });
+
+
 
 
   // dismiss flash messages

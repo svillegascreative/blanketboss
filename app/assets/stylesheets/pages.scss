@@ -2,7 +2,6 @@
 .home-container {
   @include grid-container;
   // @include grid-visual;
-  padding: $base-spacing;
 }
 .home-inner {
   max-width: 1000px;
@@ -83,7 +82,6 @@
 
 
 #home-main {
-  margin-top: 5rem;
   section {
     position: relative;
     margin: 2rem 0;

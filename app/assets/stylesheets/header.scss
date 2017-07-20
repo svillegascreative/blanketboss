@@ -23,14 +23,20 @@
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 5px $medium-gray;
+  transition: all ease 0.5s;
 }
-
 .home-link {
   float: left;
   font-family: $brand-font-family;
   font-size: 1.25rem;
   margin: 0;
 }
+.app-header-home {
+  .home-link {
+    display: none;
+  }
+}
+
 
 nav {
   float: right;
