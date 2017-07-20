@@ -1,6 +1,8 @@
-<header class="app-header <%= 'app-header-fixed' unless request.url == root_url %>">
+<header class="app-header <%= request.url == root_url ? 'app-header-home' : 'app-header-fixed' %>">
 
+<% if request.url != root_url %>
   <h1 class="home-link"><%= link_to "Blanket BOSS", root_url %></h1>
+<% end %>
 
   <% if current_user %>
     <nav>
