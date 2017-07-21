@@ -1,24 +1,27 @@
-<h1><%= @blankets.count %> Blankets</h1>
 <% if @blanket_size.present? || @blanket_type.present? || @statuses.present? %>
+  <h1>Custom list (<%= @blankets.count %> blankets)</h1>
+  <b>Filtered by: </b>
   <ul>
     <% if @blanket_size.present? %>
       <li>
-        Size: <%= @blanket_size %>
+        Size (<%= @blanket_size %>)
       </li>
     <% end %>
     <% if @blanket_type.present? %>
       <li>
-        Type: <%= @blanket_type %>
+        Type (<%= @blanket_type %>)
       </li>
     <% end %>
     <% if @statuses.present? %>
       <li>
-        Status: <% @statuses.each do |status| %>
+        Status (<% @statuses.each do |status| %>
                   <%= status.name %>
-                <% end %>
+                <% end %>)
       </li>
     <% end %>
   </ul>
+<% else %>
+  <h1>Master list (<%= @blankets.count %> blankets)</h1>
 <% end %>
 
 <ul class="accordion-tabs">
