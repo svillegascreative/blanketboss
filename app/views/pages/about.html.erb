@@ -1,22 +1,37 @@
 <div class="about-top">
-  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/8f/5A_Horse_Blankets_(3092760339).jpg", class: "about-image" %>
-  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/5/5e/5A_Horse_Blankets_%283093783296%29.jpg", class: "about-image" %>
 </div>
 
 <div id="about">
   <h1>A <em>blanket</em> manager?</h1>
   <p>
-    Yes, indeed. Horsemen have long used blankets of different styles to keep their mounts comfortable in cold climates, and we have not let that practice go to this day. With so many horses being stabled and clipped for recreational use, blanket manufacturers have created hundreds of styles and models of blankets. Whether you own a few or a few dozen, Blanket Boss is here to help you keep track of your equine wardrobe.
+    Yes, indeed. Horsemen have long used blankets of different styles to keep their mounts comfortable in cold climates, and we have not let that practice go to this day.
+  </p>
+  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/8f/5A_Horse_Blankets_(3092760339).jpg", class: "about-image" %>
+  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/5/5e/5A_Horse_Blankets_%283093783296%29.jpg", class: "about-image" %>
+  <p>
+    With so many horses being stabled and clipped for recreational use, blanket manufacturers have created hundreds of styles and models of blankets. Whether you own a few or a few dozen, Blanket Boss is here to help you keep track of your equine wardrobe.
   </p>
 
 
-  <h2>How to use Blanket Boss</h2>
+  <h2 id="howto">How to use Blanket Boss</h2>
   <h4>Sign up!</h4>
   <p>
     Start by creating your <%= link_to "free Blanket Boss account", new_user_url %>.
   </p>
+
   <h4>Add blankets</h4>
-  <p><%= link_to "Add a blanket", new_blanket_url %> by filling in details about your blanket. Give it a meaningful name (this will appear in lists).</p>
-  <h4>Review your list</h4>
-  <p>All of your blankets will be sorted alphabetically by name in a <%= link_to "master list", blankets_url %>. You can use the filters to view only a selection of blankets.</p>
+  <p>Add a blanket by filling in details about your blanket (brand, size, colour, etc). Give it a meaningful name (this will appear in lists). Use the status tags to keep tabs on your blankets: you can indicate whether they are being used or in storage, the condition they're in, whether they need washing or repair, and more! You can also add photos and notes to better identify each item.</p>
+
+  <h4>Review your lists</h4>
+  <p>All of your blankets will be sorted alphabetically by name in a master list. You can also use the filters to view only a selection of blankets, allowing you to create custom lists (e.g. all turnout blankets, anything in size 76", everything that needs washing or repair, etc).</p>
+
+  <h4>Download your lists</h4>
+  <p>
+    You can download any custom list (or your entire inventory) in CSV format, which you can then import into almost any spreadsheet or database program.
+  </p>
+
+  <h4>Email your lists</h4>
+  <p>
+    <em>Coming soon:</em> Send custom packing lists to show grooms, cleaning or repair lists to laundry services or tack stores, or any list to anyone!
+  </p>
 </div>
