@@ -36,11 +36,6 @@
 // LIST FILTERS
 .blanket-filters {
   text-align: center;
-  .filter-input {
-    display: inline-block;
-    margin-right: $small-spacing;
-    vertical-align: bottom;
-  }
   label {
     display: block;
     margin: 0;
@@ -49,6 +44,20 @@
     width: 100%;
     margin: 0;
   }
+}
+.tab-header-and-content {
+  a {
+    color: $blue;
+  }
+  a:hover,
+  a:visited {
+    color: $dark-blue;
+  }
+}
+.filter-input {
+  display: inline-block;
+  margin-right: $small-spacing;
+  vertical-align: bottom;
 }
 
 
@@ -81,6 +90,16 @@
     background: $secondary-background-alpha;
     transition: 0.3s ease;
   }
+  h3 {
+    margin: 0;
+  }
+  a {
+    color: $blue;
+  }
+  a:hover,
+  a:visited {
+    color: $dark-blue;
+  }
 }
 .blanket-thumbnail {
   width: 100px;
@@ -96,6 +115,9 @@
   padding: $base-spacing;
   img {
     width: 100%;
+  }
+  h1 {
+    margin: 0 0 $base-spacing;
   }
   span {
     font-weight: bold;
