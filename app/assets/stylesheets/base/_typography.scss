@@ -13,11 +13,15 @@ h5,
 h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
   color: $blue;
 }
+h1,
+h2,
+h3 {
+  margin: 1.5em 0 0.5em;
+}
 h1 {
-  font-size: $base-font-size * 2.5;
+  font-size: $base-font-size * 3;
 }
 h2 {
   font-size: $base-font-size * 2.2;
