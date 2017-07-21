@@ -24,6 +24,7 @@
   <h1>Master list (<%= @blankets.count %> blankets)</h1>
 <% end %>
 
+
 <ul class="accordion-tabs">
   <li class="tab-header-and-content">
     <a href="javascript:void(0)" class="is-active tab-link">Filter</a>
@@ -94,8 +95,27 @@
   <ul class="blanket-list">
     <% @blankets.each do |blanket| %>
       <li class="blanket-list-card">
-          <%= link_to "", "/blankets/#{blanket.id}", class: "blanket-thumbnail", style: "background-image: url(#{blanket.photo.thumb.url})" %>
+
+        <div class="blanket-actions">
+          <%= link_to blanket, method: :delete do %>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          <% end %> |
+          <%= link_to edit_blanket_path(blanket) do %>
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          <% end %>
+        </div>
+
+        <%= link_to "", "/blankets/#{blanket.id}", class: "blanket-thumbnail", style: "background-image: url(#{blanket.photo.thumb.url})" %>
+
         <h3><%= link_to blanket.name, "/blankets/#{blanket.id}", class: "blanket-link modal-trigger" %></h3>
+        <p>
+          Size <%= blanket.blanket_size %>
+        </p>
+        <p>
+          <% blanket.statuses.each do |status| %>
+            <span class="blanket-status"><%= status.name %></span>
+          <% end %>
+        </p>
       </li>
     <% end %>
   </ul>

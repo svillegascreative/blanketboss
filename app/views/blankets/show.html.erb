@@ -1,4 +1,5 @@
 <div class="blanket-card">
+
   <div class="blanket-actions">
     <%= link_to @blanket, method: :delete do %>
       <i class="fa fa-trash-o" aria-hidden="true"></i>
@@ -7,6 +8,7 @@
       <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
     <% end %>
   </div>
+
   <h1 class="blanket-name"><%= @blanket.name %></h1>
 
   <% if @blanket.photo.present? %>
@@ -14,33 +16,33 @@
   <% end %>
 
   <p>
-    <span>Brand:</span>
+    <b>Brand:</b>
     <%= @blanket.brand %>
   </p>
   <p>
-    <span>Type:</span>
+    <b>Type:</b>
     <%= @blanket.blanket_type&.readable %>
   </p>
   <p>
-    <span>Colour:</span>
+    <b>Colour:</b>
     <%= @blanket.colour %>
   </p>
   <p>
-    <span>Trim:</span>
+    <b>Trim:</b>
     <%= @blanket.trim %>
   </p>
   <p>
-    <span>Size:</span>
+    <b>Size:</b>
     <%= @blanket.blanket_size %>
   </p>
   <p>
-    <span>Status:</span>
-    <% @blanket.statuses.each do |status| %>
-      <%= status.name %>
-    <% end %>
+    <b>Status:</b>
+      <% @blanket.statuses.each do |status| %>
+        <span class="blanket-status"><%= status.name %></span>
+      <% end %>
   </p>
   <p>
-    <span>Note:</span>
+    <b>Note:</b>
     <%= @blanket.note %>
   </p>
 
